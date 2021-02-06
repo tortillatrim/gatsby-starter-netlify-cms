@@ -1,54 +1,17 @@
 ---
 templateKey: index-page
-title: Skape ditt optimale liv!
+title: Skap ditt optimale liv!
 image: /img/Son-lying-on-mothers-laps-945104294_2125x1416-scaled.jpeg
 heading: >
-  Møt terapeutenen
+  Møt terapeutene
 subheading: >
-  Terapiformen vår handler om å endre det mønsteret, rydde opp i sekken med ubearbeidede følelser, slik du ser din egen verdi og tør å være mer ærlig om hvem du er. Det handler om å få en god selvfølelse og ta deg selv mer på alvor.
-mainpitch:
-  title: Vi brenner for at mennesker skal føle seg god nok, våge å vise hvem de er og leve sitt liv.
-  description: >
+  Rydd opp i sekken med ubearbeidede følelser, slik du ser din egen verdi og tør å være mer ærlig om hvem du er.
      
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+description: >
+
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/anja.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
-
+        Anja Søreide har over 11 års erfaring som pedagogisk medarbeider i barnehage. I tillegg har hun jobbet med barn og unge med ulike utfordringer i skolen. Hun går tredje og siste året på EQ terapeut utdanningen i Bergen. Anja er mamma til tre barn i alderen 6-11 år.
 ---

@@ -11,7 +11,6 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
-  mainpitch,
   description,
   intro,
 }) => (
@@ -28,29 +27,24 @@ export const IndexPageTemplate = ({
     >
       <div
         style={{
-          maxWidth: '800px',
+          maxWidth: '900px',
         }}
       >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
         >
           {title}
         </h1>
-        <h3
+        <p
           className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            lineHeight: '1',
-            padding: '0.25em',
+            lineHeight: '1.3',
           }}
         >
           {subheading}
-        </h3>
+        </p>
         <div className="py-5">
-        <button className="button is-primary is-medium">Om oss</button>
+          <button className="button is-primary is-medium">Om oss</button>
         </div>
       </div>
         
@@ -61,14 +55,6 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
                 <div className="columns">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
@@ -80,19 +66,19 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
+                    <Link className="btn" to="/terapeuter">
+                      Til terapeuter
                     </Link>
                   </div>
                 </div>
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Siste innlegg
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
-                      Read more
+                      Les mer
                     </Link>
                   </div>
                 </div>
@@ -127,7 +113,6 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -159,10 +144,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
         description
         intro {
           blurbs {
@@ -175,8 +156,6 @@ export const pageQuery = graphql`
             }
             text
           }
-          heading
-          description
         }
       }
     }

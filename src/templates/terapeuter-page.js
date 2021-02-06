@@ -133,7 +133,7 @@ const TerapeuterPage = ({ data }) => {
 
   return (
     <Layout>
-      <ProductPageTemplate
+      <TerapeuterPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
