@@ -28,12 +28,7 @@ export const IndexPageTemplate = ({
     >
       <div
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          maxWidth: '800px',
         }}
       >
         <h1
@@ -46,7 +41,7 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             lineHeight: '1',
             padding: '0.25em',
@@ -54,10 +49,11 @@ export const IndexPageTemplate = ({
         >
           {subheading}
         </h3>
-      </div>
-        <div>
+        <div className="py-5">
         <button className="button is-primary is-medium">Om oss</button>
         </div>
+      </div>
+        
     </div>
     <section className="section section--gradient">
       <div className="container">

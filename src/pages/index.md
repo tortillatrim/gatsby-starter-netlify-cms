@@ -1,11 +1,11 @@
 ---
 templateKey: index-page
-title: Øk din relasjonskompetanse
+title: Skape ditt optimale liv!
 image: /img/Son-lying-on-mothers-laps-945104294_2125x1416-scaled.jpeg
 heading: >
-
+  Møt terapeutenen
 subheading: >
-
+  Terapiformen vår handler om å endre det mønsteret, rydde opp i sekken med ubearbeidede følelser, slik du ser din egen verdi og tør å være mer ærlig om hvem du er. Det handler om å få en god selvfølelse og ta deg selv mer på alvor.
 mainpitch:
   title: Vi brenner for at mennesker skal føle seg god nok, våge å vise hvem de er og leve sitt liv.
   description: >
