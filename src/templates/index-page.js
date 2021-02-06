@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({
           {subheading}
         </p>
         <div className="py-5">
-          <button className="button is-primary is-medium">Om oss</button>
+          <Link to="/about" className="button is-primary is-medium">Om oss</Link>
         </div>
       </div>
         

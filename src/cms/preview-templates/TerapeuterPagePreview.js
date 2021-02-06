@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { TerapeuterPageTemplate } from '../../templates/terapeuter-page'
 
 const TerapeuterPagePreview = ({ entry, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
+  const entryBlurbs = entry.getIn(['data', 'main', 'terapeuter'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
   const entryTestimonials = entry.getIn(['data', 'testimonials'])
@@ -18,23 +18,6 @@ const TerapeuterPagePreview = ({ entry, getAsset }) => {
       title={entry.getIn(['data', 'title'])}
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
-      intro={{ blurbs }}
-      main={{
-        heading: entry.getIn(['data', 'main', 'heading']),
-        description: entry.getIn(['data', 'main', 'description']),
-        image1: {
-          image: getAsset(entry.getIn(['data', 'main', 'image1', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image1', 'alt']),
-        },
-        image2: {
-          image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-        },
-        image3: {
-          image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image3', 'alt']),
-        },
-      }}
       fullImage={entry.getIn(['data', 'full_image'])}
       testimonials={testimonials}
       pricing={{

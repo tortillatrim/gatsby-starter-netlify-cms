@@ -5,37 +5,16 @@ title: Terapeuter
 image: /img/Son-lying-on-mothers-laps-945104294_2125x1416-scaled.jpeg
 heading: Om våre terapeuter
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
-intro:
-  blurbs:
-    - image: /img/anja.png
-      text: >
-        Anja Søreide har over 11 års erfaring som pedagogisk medarbeider i barnehage. I tillegg har hun jobbet med barn og unge med ulike utfordringer i skolen. Hun går tredje og siste året på EQ terapeut utdanningen i Bergen. Anja er mamma til tre barn i alderen 6-11 år.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+  Lorem ipsum.
+terapeuter:
+  - image: /img/anja.png
+    name: Anja Søreide
+    tel: 11221122
+    email: anja@hjertekroll.no
+    workdays: Mandag - Fredag
+    workhours: 09:00 - 17:00
+    text: >
+      Anja Søreide har over 11 års erfaring som pedagogisk medarbeider i barnehage. I tillegg har hun jobbet med barn og unge med ulike utfordringer i skolen. Hun går tredje og siste året på EQ terapeut utdanningen i Bergen. Anja er mamma til tre barn i alderen 6-11 år.
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-
@@ -45,13 +24,11 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+full_image: /img/Happy-familiy-spending-fun-time-at-home-871175856_2125x1416-scaled.jpeg
 pricing:
-  heading: Monthly subscriptions
+  heading: Pris
   description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
+    
   plans:
     - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
       items:
