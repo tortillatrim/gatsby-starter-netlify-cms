@@ -21,7 +21,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "terapeut"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Tel", name: "tel", widget: "string"}
+      - {label: "Tel", name: "tel", widget: "number"}
       - {label: "Email", name: "email", widget: "string"}
       - {label: "Workdays", name: "workdays", widget: "list", fields: [{label: Days, name: days, widget: string}, {label: Hours, name: hours, widget: string}]}
       - {label: "Description", name: "description", widget: "text"}

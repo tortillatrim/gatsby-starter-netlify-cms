@@ -8,22 +8,13 @@ $hjertekroll-green-invert: #fff
 $primary: $hjertekroll-green
 $primary-invert: $hjertekroll-green-invert
 $body-color: #333
-$black: #2b2523
+$black: #25291b
+$body-background-color: #f8f8f8;
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+.material-icons 
+  font-family: 'Material Icons';
+  font-size: 24px;
+
 
 // Helper Classes
 .full-width-image-container
@@ -81,7 +72,10 @@ footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
 
-  
+.table
+  background-color: transparent !important
+
+
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
@@ -119,9 +113,30 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
-
-
+  
 @import "~bulma"
+
+.therapist-main-card 
+  margin-top: 80px
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: $box-shadow
+
+  img, .gatsby-image-wrapper
+    height: 320px !important
+    border-bottom-left-radius: 0px !important
+    border-bottom-right-radius: 0px !important
+
+.therapist-main-action
+  margin-top: 100px
+  height: 300px
+  display: flex
+  align-items: flex-end
+
+.contact-icon
+  border-radius: 50%
+
+
 
 
 // responsiveness
@@ -130,6 +145,8 @@ $menu-label-color: $white-ter
     flex-basis: 50%;
 
 +mobile
+  .column-mob-inline
+    display: inline-block
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail

@@ -49,7 +49,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div style={{minHeight: '70vh'}}>{children}</div>
       <Footer />
     </div>
   )

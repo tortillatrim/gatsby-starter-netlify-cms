@@ -40,8 +40,8 @@ const Navbar = class extends React.Component {
       >
         <div className="container py-4">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Hjertekrøll - terapi"/>
+            <Link to="/" className="navbar-item" title="Hjertekrøll - EQ Terapi">
+              <img src={logo} alt="Hjertekrøll - EQ Terapi"/>
               <span className="ml-3 is-size-5 has-text-weight-bold" style={{color: 'rgb(97 109 68)'}}>EQ Terapi</span>
             </Link>
             {/* Hamburger menu */}
@@ -72,7 +72,7 @@ const Navbar = class extends React.Component {
 
             </div>
             <div className="navbar-end has-text-centered">
-                <Link to="/terapeuter" className="navbar-item button is-primary is-medium">Bestill time</Link>
+                <Link to="/terapeuter" className="navbar-item button is-primary is-medium">Bestill time <span className="material-icons pl-2">book_online</span></Link>
             </div>
           </div>
         </div>

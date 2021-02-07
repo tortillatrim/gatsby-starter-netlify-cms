@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo-1.png'
+import logo from '../img/logo-small.png'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 
@@ -13,7 +13,7 @@ const Footer = class extends React.Component {
           <img
             src={logo}
             alt="Hjertekrøll"
-            style={{ width: '14em' }}
+            style={{ width: '5em' }}
           />
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">

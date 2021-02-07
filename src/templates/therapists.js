@@ -5,38 +5,114 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Workdays from '../components/Workdays'
 
 export const TerapeutTemplate = ({
   content,
   contentComponent,
+  image,
   description,
   name,
-  image,
+  tel,
+  email,
+  workdays,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content
+  const PageContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <div>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {name}
-            </h1>
-            <PreviewCompatibleImage
-                        imageInfo={{
-                          image: image,
-                          alt: `featured image thumbnail for therapist ${name}`,
-                        }}
-                      />
-            <p>{description}</p>
-            <PostContent content={content} />
+    <div
+      style={{
+        width: '100%',
+        position: 'absolute',
+        height: '400px',
+        backgroundColor: '#394029',
+        zIndex: '-1'
+      }}
+    ></div>
+    <section className="container">
+      <div className="columns is-tablet is-gapless column-mob-inline">
+        <div className="column is-one-third-tablet">
+          <div className="px-4">
+            <div className="therapist-main-card content">
+              <PreviewCompatibleImage
+                          imageInfo={{
+                            image: image,
+                            alt: `featured image thumbnail for therapist ${name}`,
+                          }}
+                        />
+              <div className="p-5">
+              <h2>{name}</h2>
+              <span className="tag is-normal">EQ Terapeut</span>
+              <p className="py-3">{description}</p>
+              </div>
+            </div>
+            <article className="message is-info mt-6">
+              <p className="message-header">
+                Kontakt
+                <i className="material-icons">phone</i>
+              </p>
+              <div className="message-body">
+                <p>Ta kontakt for å bestille time</p>
+                <div className="is-flex pt-3">
+                  <i className="material-icons mr-3">phone</i><a href={"tel:" + tel}>{tel}</a>
+                </div>
+                <div className="is-flex pt-3">
+                  <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
+                </div>
+              </div>
+            </article>
+
+            <article className="message my-6">
+              <p className="message-header">
+                Arbeidstid
+                <i className="material-icons">schedule</i>
+              </p>
+              <div className="message-body">
+                <Workdays workdays={workdays} />
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <div className="column is-two-third-tablet">
+          <div className="therapist-main-action section is-hidden-mobile">
+            <button onClick={() => document.getElementById('book-modal').classList.add('is-active')} className="button is-primary is-large">Bestill time <span className="material-icons pl-2">book_online</span></button>
+          </div>
+          
+          <div className="section">
+            <h2 className="title">Om terapeuten</h2>
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </div>
     </section>
+
+      <div className="modal" id="book-modal">
+        <div className="modal-background"></div>
+        <div className="modal-card">
+          <header className="modal-card-head">
+            <p className="modal-card-title">Bestill time hos {name}</p>
+            <button className="delete" aria-label="close" onClick={() => document.getElementById('book-modal').classList.remove('is-active')}></button>
+          </header>
+          <section className="modal-card-body">
+            <p>Ta kontakt for å bestille time</p>
+            <div className="is-flex pt-3">
+              <i className="material-icons mr-3">phone</i><a href={"tel:" + tel}>{tel}</a>
+            </div>
+            <div className="is-flex pt-3">
+              <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
+            </div>
+          </section>
+          <footer className="modal-card-foot">
+            <button className="button" onClick={() => document.getElementById('book-modal').classList.remove('is-active')}>Avbryt</button>
+          </footer>
+        </div>
+      </div>
+
+    </div>
   )
 }
 
@@ -45,6 +121,9 @@ TerapeutTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   name: PropTypes.string,
+  tel: PropTypes.number,
+  email: PropTypes.string,
+  workdays: PropTypes.array,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   helmet: PropTypes.object,
 }
@@ -69,6 +148,9 @@ const Terapeut = ({ data }) => {
           </Helmet>
         }
         name={terapeut.frontmatter.name}
+        tel={terapeut.frontmatter.tel}
+        email={terapeut.frontmatter.email}
+        workdays={terapeut.frontmatter.workdays}
       />
     </Layout>
   )
@@ -90,6 +172,12 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        tel
+        email
+        workdays {
+          days
+          hours
         }
       }
     }
