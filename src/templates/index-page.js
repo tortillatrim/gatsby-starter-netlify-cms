@@ -3,29 +3,29 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import TherapistRoll from '../components/TherapistRoll'
+import Testimonials from '../components/Testimonials'
 
 export const IndexPageTemplate = ({
   image,
-  title,
   heading,
   subheading,
-  description,
-  intro,
+  testimonials,
 }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
+        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
+        color: '#fff'
       }}
     >
       <div
+        className="px-2"
         style={{
           maxWidth: '900px',
         }}
@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
         >
-          {title}
+          {heading}
         </h1>
         <p
           className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
@@ -44,48 +44,31 @@ export const IndexPageTemplate = ({
           {subheading}
         </p>
         <div className="py-5">
-          <Link to="/about" className="button is-primary is-medium">Om oss</Link>
+          <Link to="/about" className="button is-white is-medium is-outlined">Om oss</Link>
         </div>
       </div>
         
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
+                <div className="column is-12">
+                  <h2 className="title">Møt terapeutene</h2>
+                  <TherapistRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/terapeuter">
-                      Til terapeuter
+                    Til terapeuter
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Siste innlegg
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Les mer
-                    </Link>
-                  </div>
-                </div>
+
+                <h3 className="title">Tilbakemeldinger</h3>
+                <Testimonials testimonials={testimonials} />
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   </div>
@@ -93,14 +76,9 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  testimonials: PropTypes.array,
 }
 
 const IndexPage = ({ data }) => {
@@ -110,11 +88,9 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        testimonials={frontmatter.testimonials}
       />
     </Layout>
   )
@@ -134,7 +110,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -144,18 +119,9 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
+        testimonials {
+          author
+          quote
         }
       }
     }

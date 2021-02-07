@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const BlogPostTemplate = ({
+export const TerapeutTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
-  title,
+  name,
+  image,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -23,22 +23,16 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
+              {name}
             </h1>
+            <PreviewCompatibleImage
+                        imageInfo={{
+                          image: image,
+                          alt: `featured image thumbnail for therapist ${name}`,
+                        }}
+                      />
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
@@ -46,57 +40,57 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
+TerapeutTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
+  name: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const Terapeut = ({ data }) => {
+  const { markdownRemark: terapeut } = data
 
   return (
     <Layout>
-      <BlogPostTemplate
-        content={post.html}
+      <TerapeutTemplate
+        content={terapeut.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={terapeut.frontmatter.description}
+        image={terapeut.frontmatter.image}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+          <Helmet titleTemplate="%s | EQ Terapeut">
+            <title>{`${terapeut.frontmatter.name}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={`${terapeut.frontmatter.description}`}
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        name={terapeut.frontmatter.name}
       />
     </Layout>
   )
 }
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
-
-export default BlogPost
+export default Terapeut
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query TerapeutByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
+        name
         description
-        tags
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

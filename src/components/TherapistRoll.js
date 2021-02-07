@@ -3,28 +3,26 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRoll extends React.Component {
+class TherapistRoll extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: therapists } = data.allMarkdownRemark
 
     return (
       <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+        {therapists &&
+          therapists.map(({ node: therapist }) => (
+            <div className="is-parent column is-6" key={therapist.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+                className={`blog-list-item tile is-child box notification`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
+                  {therapist.frontmatter.image ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          image: therapist.frontmatter.image,
+                          alt: `featured image thumbnail for therapist ${therapist.frontmatter.name}`,
                         }}
                       />
                     </div>
@@ -32,22 +30,18 @@ class BlogRoll extends React.Component {
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
+                      to={therapist.fields.slug}
                     >
-                      {post.frontmatter.title}
+                      {therapist.frontmatter.name}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
                   </p>
                 </header>
                 <p>
-                  {post.excerpt}
+                  {therapist.frontmatter.description}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Les mer →
+                  <Link className="button" to={therapist.fields.slug}>
+                    Velg →
                   </Link>
                 </p>
               </article>
@@ -58,7 +52,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+TherapistRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -69,24 +63,21 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query TherapistRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "therapists" } } }
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
               id
               fields {
                 slug
               }
               frontmatter {
-                title
+                name
+                description
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
-                featuredpost
-                featuredimage {
+                image {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
                       ...GatsbyImageSharpFluid
@@ -99,6 +90,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <TherapistRoll data={data} count={count} />}
   />
 )
