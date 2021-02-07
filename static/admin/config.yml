@@ -12,9 +12,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "terapeut"
-    label: "Terapeut"
-    folder: "src/pages/terapeut"
+  - name: "terapeuter"
+    label: "Terapeuter"
+    folder: "src/pages/terapeuter"
     create: true
     slug: "{{slug}}"
     fields:
@@ -23,7 +23,7 @@ collections:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Tel", name: "tel", widget: "string"}
       - {label: "Email", name: "email", widget: "string"}
-      - {label: "Workdays", name: "workdays", widget: "list", fields: [{label: Days, name: days, widget: string}, {label: Hours, name: hours, widget: string}]}]}
+      - {label: "Workdays", name: "workdays", widget: "list", fields: [{label: Days, name: days, widget: string}, {label: Hours, name: hours, widget: string}]}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
 
