@@ -8,18 +8,10 @@ function isDomAvailable() {
   }
 
 const Map = ( props ) => {
- 
-
-  if ( !isDomAvailable()) {
+  
+  if (typeof window !== 'undefined') {
     return (
       <div className="map-container">
-        <p className="map-loading">Laster kart...</p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="map-container">
       <MapContainer center={[60.30069163013214, 5.339820340965894]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -34,7 +26,9 @@ const Map = ( props ) => {
         </Marker>
         </MapContainer>
     </div>
-  );
+    )
+  }
+  return null
 };
 
 Map.propTypes = {

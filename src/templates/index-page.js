@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
+        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top center`,
@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
       <div className="hero-body">
       
         <div className="container px-5">
-          <h2 className="title">Møt oss her</h2>
+          <h2 className="title">Du finner oss her</h2>
           <div className="columns is-tablet">
             <div className="column">
               <strong>SKJOLD HELSEHUS</strong>

@@ -63,7 +63,7 @@ export const TerapeutTemplate = ({
                   <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
                 </div>
                 <div className="is-flex pt-3">
-                  <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
+                  <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
                 </div>
               </div>
             </article>
@@ -109,7 +109,7 @@ export const TerapeutTemplate = ({
               <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
             </div>
             <div className="is-flex pt-3">
-              <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
+              <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
             </div>
           </section>
           <footer className="modal-card-foot">
