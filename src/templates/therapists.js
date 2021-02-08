@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Workdays from '../components/Workdays'
+import BookingForm from '../components/BookingForm'
 
 export const TerapeutTemplate = ({
   content,
@@ -47,6 +48,8 @@ export const TerapeutTemplate = ({
               <h2>{name}</h2>
               <span className="tag is-normal">EQ Terapeut</span>
               <p className="py-3">{description}</p>
+              
+              <button onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth'})} className="is-hidden-tablet button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</button>
               </div>
             </div>
             <article className="message is-info mt-6">
@@ -55,7 +58,6 @@ export const TerapeutTemplate = ({
                 <i className="material-icons">phone</i>
               </p>
               <div className="message-body">
-                <p>Ta kontakt for å bestille time</p>
                 <div className="is-flex pt-3">
                   <i className="material-icons mr-3">phone</i><a href={"tel:" + tel}>{tel}</a>
                 </div>
@@ -82,42 +84,30 @@ export const TerapeutTemplate = ({
         </div>
         <div className="column is-two-third-tablet">
           <div className="therapist-main-action section is-hidden-mobile">
-            <button onClick={() => document.getElementById('book-modal').classList.add('is-active')} className="button cta-button is-large"><i className="material-icons pr-3">book_online</i> Bestill time</button>
+            <button onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth'})} className="button cta-button is-large"><i className="material-icons pr-3">book_online</i> Bestill time</button>
           </div>
           
           <div className="section">
             <h2 className="title">Om terapeuten</h2>
             <PageContent className="content" content={content} />
           </div>
+
+          <br/>
+          <section className="hero has-background-info-light">
+            <div className="hero-body">
+              <div className="container px-5">
+                <h2 className="title" id="contact">Kontakt meg</h2>
+                <p>Send meg en melding eller ta kontakt direkte for å avtale en time</p>
+                <br/>
+                <BookingForm />
+              </div>
+            </div>
+          </section>
+          <br/>
+          
         </div>
       </div>
     </section>
-
-      <div className="modal" id="book-modal">
-        <div className="modal-background"></div>
-        <div className="modal-card">
-          <header className="modal-card-head">
-            <p className="modal-card-title">Bestill time hos {name}</p>
-            <button className="delete" aria-label="close" onClick={() => document.getElementById('book-modal').classList.remove('is-active')}></button>
-          </header>
-          <section className="modal-card-body">
-            <p>Ta kontakt for å bestille time</p>
-            <div className="is-flex pt-3">
-              <i className="material-icons mr-3">phone</i><a href={"tel:" + tel}>{tel}</a>
-            </div>
-            <div className="is-flex pt-3">
-              <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
-            </div>
-            <div className="is-flex pt-3">
-              <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
-            </div>
-          </section>
-          <footer className="modal-card-foot">
-            <button className="button" onClick={() => document.getElementById('book-modal').classList.remove('is-active')}>Avbryt</button>
-          </footer>
-        </div>
-      </div>
-
     </div>
   )
 }

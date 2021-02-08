@@ -7,7 +7,7 @@ subheading: >
   Rydd opp i sekken med ubearbeidede følelser, slik at du ser din egen verdi og tør å være mer ærlig om hvem du er.
      
 testimonials:
-  - author: Ruth-Ine, 34 år
+  - author: Mann, 40 år
     quote: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Gjenta etter meg: Føleser! Føleser! Føleser!
 ---
