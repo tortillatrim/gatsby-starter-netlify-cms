@@ -63,7 +63,7 @@ export const TerapeutTemplate = ({
                   <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
                 </div>
                 <div className="is-flex pt-3">
-                  <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
+                  <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" aria-label="Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
                 </div>
               </div>
             </article>
@@ -82,7 +82,7 @@ export const TerapeutTemplate = ({
         </div>
         <div className="column is-two-third-tablet">
           <div className="therapist-main-action section is-hidden-mobile">
-            <button onClick={() => document.getElementById('book-modal').classList.add('is-active')} className="button is-primary is-large">Bestill time <span className="material-icons pl-2">book_online</span></button>
+            <button onClick={() => document.getElementById('book-modal').classList.add('is-active')} className="button cta-button is-large"><i className="material-icons pr-3">book_online</i> Bestill time</button>
           </div>
           
           <div className="section">
@@ -109,7 +109,7 @@ export const TerapeutTemplate = ({
               <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
             </div>
             <div className="is-flex pt-3">
-              <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
+              <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;q=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
             </div>
           </section>
           <footer className="modal-card-foot">

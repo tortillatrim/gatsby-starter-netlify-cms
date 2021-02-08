@@ -60,19 +60,19 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <Link className="navbar-item" to="/about" activeClassName="is-active">
                 Om oss
               </Link>
-              <Link className="navbar-item" to="/terapeuter">
+              <Link className="navbar-item" to="/terapeuter" partiallyActive={true} activeClassName="is-active">
                 Terapeuter
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="/contact" activeClassName="is-active">
                 Kontakt
               </Link>
 
             </div>
             <div className="navbar-end has-text-centered">
-                <Link to="/terapeuter" className="navbar-item button is-primary is-medium">Bestill time <i className="material-icons pl-2">book_online</i></Link>
+                <Link to="/terapeuter" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
             </div>
           </div>
         </div>

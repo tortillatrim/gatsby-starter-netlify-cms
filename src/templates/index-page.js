@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({
           {subheading}
         </p>
         <div className="py-5">
-          <Link to="/terapeuter" className="button is-primary is-medium mr-4">Bestill time <span className="material-icons pl-2">book_online</span></Link>
+          <Link to="/terapeuter" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
           <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
         </div>
       </div>
@@ -80,9 +80,9 @@ export const IndexPageTemplate = ({
               <div>5236 RÅDAL</div>
 
               <br />
-              <a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
-                Få beskrivelser
-                <i className="material-icons pl-2">directions</i>
+              <a  href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
+                Finn reisemåte
+                <i className="material-icons pl-3">directions</i>
                 </a>
             </div>
             <div className="column">
