@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
@@ -62,6 +62,9 @@ export const TerapeutTemplate = ({
                 <div className="is-flex pt-3">
                   <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
                 </div>
+                <div className="is-flex pt-3">
+                  <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
+                </div>
               </div>
             </article>
 
@@ -104,6 +107,9 @@ export const TerapeutTemplate = ({
             </div>
             <div className="is-flex pt-3">
               <i className="material-icons mr-3">email</i><a href={"mailto: " + email}>{email}</a>
+            </div>
+            <div className="is-flex pt-3">
+              <i className="material-icons mr-3">place</i><a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO">Skjold Helsehus</a>
             </div>
           </section>
           <footer className="modal-card-foot">
@@ -168,7 +174,7 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import TherapistRoll from '../components/TherapistRoll'
 import Testimonials from '../components/Testimonials'
+import Map from '../components/Map'
 
 export const IndexPageTemplate = ({
   image,
@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
         backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `top center`,
         backgroundAttachment: `fixed`,
         color: '#fff'
       }}
@@ -48,29 +48,54 @@ export const IndexPageTemplate = ({
           <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
         </div>
       </div>
-        
     </div>
-    <section className="section section--gradient">
-      <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="column is-12">
-                  <h2 className="title">Møt terapeutene</h2>
-                  <TherapistRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/terapeuter">
-                    Til terapeuter
-                    </Link>
-                  </div>
-                </div>
 
-                <h3 className="title">Tilbakemeldinger</h3>
-                <Testimonials testimonials={testimonials} />
+    <section className="section section--gradient container">
+      <h2 className="title">Møt terapeutene</h2>
+      <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="content">
+              <div className="column is-12">
+                <TherapistRoll />
+                <div className="column is-12 has-text-centered">
+                  <Link className="btn" to="/terapeuter">
+                  Til terapeuter
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
       </div>
+    </section>
+   
+    <section className="hero has-background-info-light">
+      <div className="hero-body">
+      
+        <div className="container px-5">
+          <h2 className="title">Møt oss her</h2>
+          <div className="columns is-tablet">
+            <div className="column">
+              <strong>SKJOLD HELSEHUS</strong>
+              <div>SÆTERVEGEN 25</div>
+              <div>5236 RÅDAL</div>
+
+              <br />
+              <a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
+                Få beskrivelser
+                <i className="material-icons pl-2">directions</i>
+                </a>
+            </div>
+            <div className="column">
+              <Map></Map>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="section section--gradient container content">
+      <h2 className="title">Tilbakemeldinger</h2>
+      <Testimonials testimonials={testimonials} />
     </section>
   </div>
 )

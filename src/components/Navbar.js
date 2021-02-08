@@ -72,7 +72,7 @@ const Navbar = class extends React.Component {
 
             </div>
             <div className="navbar-end has-text-centered">
-                <Link to="/terapeuter" className="navbar-item button is-primary is-medium">Bestill time <span className="material-icons pl-2">book_online</span></Link>
+                <Link to="/terapeuter" className="navbar-item button is-primary is-medium">Bestill time <i className="material-icons pl-2">book_online</i></Link>
             </div>
           </div>
         </div>

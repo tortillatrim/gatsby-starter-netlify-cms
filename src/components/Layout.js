@@ -38,7 +38,8 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
+        {/* <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> */}
+        <meta name="theme-color" content="#738150" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />

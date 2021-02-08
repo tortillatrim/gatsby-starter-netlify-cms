@@ -11,6 +11,9 @@ export default class TerapistIndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <h1>Terapeuter</h1>
+              <p>
+                Velg terapeut for å bestille time
+              </p>
               <TherapistRoll />
             </div>
           </div>
