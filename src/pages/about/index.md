@@ -1,12 +1,10 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: Om oss
+title: Hvem er vi i Hjertekrøll
 ---
-### Avsnitt 1
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Til sammen har vi over 20 års erfaring fra arbeid med barn i barnehage. Vi er også foreldre og vet at foreldrerollen ikke alltid er like enkel. Noen ganger kan det være et kaos av følelser både hos liten og stor.
 
+Annette Simonsen er utdannet Førskolelærer og har jobbet som pedagogisk leder i barnehage i over 9 år. Hun utdanner seg til å bli EQ terapeut og går nå sitt andre år i Bergen på EQ Institutt. Hun har selv to barn på 12 og 15 år.
 
-### Avsnitt 2
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+Anja Søreide har over 11 års erfaring som pedagogisk medarbeider i barnehage. I tillegg har hun jobbet med barn og unge med ulike utfordringer i skolen. Hun går tredje og siste året på EQ terapeut utdanningen i Bergen. Anja er mamma til tre barn i alderen 6-11 år.
