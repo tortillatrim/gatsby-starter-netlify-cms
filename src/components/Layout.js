@@ -47,9 +47,9 @@ const TemplateWrapper = ({ children }) => {
           {`
             {
               "@context": "https://schema.org",
-              "@type": "local business",
+              "@type": "LocalBusiness",
               "url": "https://terapi.hjertekroll.no",
-              "@id": "https://terapi.hjertekroll.no",
+              "image" : "https://terapi.hjertekroll.no/img/og-image.png",
               "name": "Hjertekrøll - EQ Terapi",
               "telephone": "95137906",
               "address": {
