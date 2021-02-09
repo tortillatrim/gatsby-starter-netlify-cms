@@ -32,11 +32,6 @@ const Footer = class extends React.Component {
                         Om oss
                       </Link>
                     </li>
-                    <li>
-                      <Link className="navbar-item" to="/terapeuter">
-                        Terapeuter
-                      </Link>
-                    </li>
                   </ul>
                 </section>
               </div>
@@ -44,32 +39,27 @@ const Footer = class extends React.Component {
                 <section>
                   <ul className="menu-list">
                     <li>
+                      <Link className="navbar-item" to="/terapeuter">
+                        Terapeuter
+                      </Link>
+                    </li>
+                    <li>
                       <Link className="navbar-item" to="/contact">
                         Kontakt oss
                       </Link>
                     </li>
-                      <li>
-                          <a
-                              className="navbar-item"
-                              href="/admin/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                          >
-                              Admin
-                          </a>
-                      </li>
                   </ul>
                 </section>
               </div>
               <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
+                <a title="facebook" href="https://facebook.com/hjertekroll">
                   <img
                     src={facebook}
                     alt="Facebook"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-                <a title="instagram" href="https://instagram.com">
+                <a title="instagram" href="https://instagram.com/hjertekroll">
                   <img
                     src={instagram}
                     alt="Instagram"
