@@ -43,6 +43,32 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix('/')}img/og-image.png`}
         />
+        <script type="application/ld+json">
+          {`
+              {
+                "@context": "https://schema.org",
+                "@type": "local business",
+                "url": "https://terapi.hjertekroll.no",
+                "@id": "https://terapi.hjertekroll.no",
+                "name": "Hjertekrøll - EQ Terapi",
+                "telephone": "95137906",
+               
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Sætervegen 25",
+                  "addressLocality": "Rådal",
+                  "addressRegion": "Bergen",
+                  "postalCode": "5236",
+                  "addressCountry": "Norway"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 60.30069163013214,
+                  "longitude": 5.339820340965894
+                },
+              }
+            `}
+        </script>
       </Helmet>
       <Navbar />
       <div style={{minHeight: '70vh'}}>{children}</div>
