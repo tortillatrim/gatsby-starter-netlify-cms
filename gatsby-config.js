@@ -43,6 +43,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/contact/*`]
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
