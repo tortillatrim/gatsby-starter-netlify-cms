@@ -22,7 +22,7 @@ export const ContactPageTemplate = ({ title, qaDescription, content, contentComp
             {title}
           </h1>
           <PageContent className="content" content={content} />
-          <p>Sjekk <a href="#qa" onClick={handleClickQA}>spørsmål og svar</a> før du henvender deg. Kanskje har noen lurt på det samme.</p>
+          <p>Sjekk <a href="#qa" onClick={handleClickQA}>spørsmål og svar</a> før du henvender deg. Kanskje har noen lurt på det samme som deg?</p>
         </div>
       </section>
       <section className="has-background-white-ter">

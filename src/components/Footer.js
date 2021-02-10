@@ -52,6 +52,11 @@ const Footer = class extends React.Component {
                         Kontakt oss
                       </Link>
                     </li>
+                    <li>
+                      <Link className="navbar-item" to="/personvernerklaering">
+                        Personvernerklæring
+                      </Link>
+                    </li>
                   </ul>
                 </section>
               </div>

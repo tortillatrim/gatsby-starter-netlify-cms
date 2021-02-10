@@ -7,8 +7,8 @@ qaDescription: Her finner du svar på de vanligste spørsmålene vi blir stilt. 
 qas:
   - question: Hvordan betaler jeg for timen?
     answer: >-
-      Vi er utstyrt med betalingsterminaler. Vi tar vanlig bankkort og kredittkort.
+      Vi er utstyrt med betalingsterminaler. Vi tar vanlig bankkort.
 ---
-Vi er her for å hjelpe deg med alle spørmålene du har 🙂
+Vi er her for å hjelpe deg med alle spørsmålene du har 🙂
 
-Vi svare alle henveldelser så fort som mulig. Vennligst ikke del personsensitive opplysninger i henvendelsen.
+Vi svare alle henveldelser så fort som mulig.

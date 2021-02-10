@@ -11,10 +11,10 @@ export default () => (
           <h1 className="title">Bestill time</h1>
           <p>Ønsker du å bestille time? Ring oss, send e-post eller fyll ut kontaktskjema under.</p>
           <div className="columns is-tablet py-3">
-            <div className="column p-5">
+            <div className="column mb-4">
               <BookingForm />
             </div>
-            <div className="column p-5">
+            <div className="column">
               <Map></Map>
               <div class="level">
                 <div class="level-item has-text-centered my-6">

@@ -2,18 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
-const QAs = ({ qas }) => (
-  <div>
-    {qas.map((qas) => (
-      <article key={v4()}>
-        <h4>{qas.question}</h4>
-        <p>
-        {qas.answer}
-        </p>
-      </article>
-    ))}
-  </div>
-)
+const QAs = class extends React.Component {
+
+  render() {
+    var open = window.innerWidth < 768 ? false : true
+    return (
+      <div>
+        {this.props.qas.map((qas) => (
+          <details key={v4()} className={`qa-detail`} open={open}>
+            <summary type="title">{qas.question}</summary>
+            <p type="default">
+              {qas.answer}
+            </p>
+            </details>
+        ))}
+      </div>
+    )
+  }
+}
 
 QAs.propTypes = {
   qas: PropTypes.arrayOf(
