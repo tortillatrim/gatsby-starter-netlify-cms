@@ -5,7 +5,10 @@ import { v4 } from 'uuid'
 const QAs = class extends React.Component {
 
   render() {
-    var open = window.innerWidth < 768 ? false : true
+    var open = true;
+    if (typeof window !== 'undefined') {
+      open = window.innerWidth < 768 ? false : true
+    }
     return (
       <div>
         {this.props.qas.map((qas) => (
