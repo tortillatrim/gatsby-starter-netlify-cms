@@ -5,7 +5,7 @@ import { v4 } from 'uuid'
 const QAs = ({ qas }) => (
   <div>
     {qas.map((qas) => (
-      <article key={v4()} className="">
+      <article key={v4()}>
         <h4>{qas.question}</h4>
         <p>
         {qas.answer}

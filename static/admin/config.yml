@@ -46,7 +46,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: QAs, name: qas, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: aswer, widget: text}]}    
+          - {label: QAs, name: qas, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: answer, widget: text}]}    
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

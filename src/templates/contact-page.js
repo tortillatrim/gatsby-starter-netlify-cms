@@ -26,7 +26,8 @@ export const ContactPageTemplate = ({ title, qaDescription, content, contentComp
         </div>
       </section>
       <section className="has-background-white-ter">
-        <div className="section container content">
+        <div className="section">
+        <div className="container content">
           <div className="columns">
             <div className="column">
               <ContactForm></ContactForm>
@@ -52,6 +53,7 @@ export const ContactPageTemplate = ({ title, qaDescription, content, contentComp
           <p>{qaDescription}</p>
           <br />
           <QAs qas={qas} />
+        </div>
         </div>
       </section>
     </div>

@@ -43,9 +43,9 @@ const BookingForm = class BookingForm extends React.Component {
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
-           <div class="notification is-warning is-light">
-          Vennligst ikke del personsensitive opplysninger i henvendelsen
-        </div>
+          <div className="notification is-warning is-light">
+            Vennligst ikke del personsensitive opplysninger i henvendelsen
+          </div>
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
           <input type="hidden" name="form-name" value="booking" />
           <div hidden>
