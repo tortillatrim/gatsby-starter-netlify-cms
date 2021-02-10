@@ -16,9 +16,8 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: `top center`,
         backgroundAttachment: `fixed`,
         color: '#fff'
@@ -44,33 +43,23 @@ export const IndexPageTemplate = ({
           {subheading}
         </p>
         <div className="py-5">
-          <Link to="/terapeuter" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
+          <Link to="/bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
           <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
         </div>
       </div>
     </div>
 
-    <section className="section section--gradient container">
+    <section className="section container">
       <h2 className="title">Møt terapeutene</h2>
-      <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
-              <div className="column is-12">
-                <TherapistRoll />
-                <div className="column is-12 has-text-centered">
-                  <Link className="btn" to="/terapeuter">
-                  Til terapeuter
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+      <TherapistRoll />
+      <div className="has-text-centered">
+        <Link className="btn" to="/terapeuter">Til terapeuter</Link>
       </div>
     </section>
-   
+
     <section className="hero has-background-info-light">
       <div className="hero-body">
-      
+
         <div className="container px-5">
           <h2 className="title">Du finner oss her</h2>
           <div className="columns is-tablet">
@@ -80,10 +69,10 @@ export const IndexPageTemplate = ({
               <div>5236 RÅDAL</div>
 
               <br />
-              <a  href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
+              <a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
                 Finn reisemåte
                 <i className="material-icons pl-3">directions</i>
-                </a>
+              </a>
             </div>
             <div className="column">
               <Map></Map>
@@ -93,7 +82,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
 
-    <section className="section section--gradient container content">
+    <section className="section container content">
       <h2 className="title">Tilbakemeldinger</h2>
       <Testimonials testimonials={testimonials} />
     </section>

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
-const Workdays = ({ workdays: workdays }) => (
+const Workdays = ({ workdays }) => (
   <div>
     <table className="table is-fullwidth">
       <tbody>

@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 
-function isDomAvailable() {
-    return typeof window !== 'undefined' && !!window.document && !!window.document.createElement;
-  }
-
 const Map = ( props ) => {
   
   if (typeof window !== 'undefined') {

@@ -6,10 +6,10 @@ image: /img/anja-small.png
 tel: 95137906
 email: anja@hjertekroll.no
 workdays:
-  - days: ons
-    hours: 15:00 - 20:00
-  - days: tor-fre
+  - days: man-ons
     hours: 08:00 - 16:00
+  - days: tor-fre
+    hours: 16:00 - 20:00
 ---
 
 ### Erfaring

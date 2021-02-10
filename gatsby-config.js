@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/contact/*`]
+        exclude: [`/contact/*`, `/bestill-time/*`]
       },
     },
     {

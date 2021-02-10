@@ -96,7 +96,7 @@ export const TerapeutTemplate = ({
           <section className="hero has-background-info-light">
             <div className="hero-body">
               <div className="container px-5">
-                <h2 className="title" id="contact">Kontakt meg</h2>
+                <h2 className="title" id="contact">Bestill time</h2>
                 <p>Send meg en melding eller ta kontakt direkte for å avtale en time</p>
                 <br/>
                 <BookingForm />

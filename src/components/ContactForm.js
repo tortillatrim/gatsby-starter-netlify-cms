@@ -36,18 +36,15 @@ const BookingForm = class BookingForm extends React.Component {
     return (
       <div>
         <form
-          name="booking"
+          name="contact"
           method="post"
           action="thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
-           <div class="notification is-warning is-light">
-          Vennligst ikke del personsensitive opplysninger i henvendelsen
-        </div>
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="booking" />
+          <input type="hidden" name="form-name" value="contact" />
           <div hidden>
             <label>
               Don’t fill this out:{' '}

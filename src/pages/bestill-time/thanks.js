@@ -1,14 +1,17 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import BookingForm from '../../components/BookingForm'
 
 export default () => (
   <Layout>
     <section className="section">
       <div className="container">
         <div className="content">
-          <h1>Kontakt oss</h1>
-          <BookingForm />
+          <h1>Takk!</h1>
+          <article class="message is-primary">
+            <div class="message-body">
+              Vi vil kontakte deg så fort vi kan for å avtale time.
+            </div>
+          </article>
         </div>
       </div>
     </section>

@@ -39,6 +39,14 @@ collections:
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: QAs, name: qas, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: aswer, widget: text}]}    
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

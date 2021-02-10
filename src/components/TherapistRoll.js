@@ -9,10 +9,10 @@ class TherapistRoll extends React.Component {
     const { edges: therapists } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="columns">
         {therapists &&
           therapists.map(({ node: therapist }) => (
-            <div className="is-parent column is-6" key={therapist.id}>
+            <div key={therapist.id} className="column is-6">
               <article
                 className={`blog-list-item tile is-child box notification`}
               >

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
 const Testimonials = ({ testimonials }) => (
-  <div>
+  <div className="columns">
     {testimonials.map((testimonial) => (
+      <div className="column is-6">
       <article key={v4()} className="message">
         <div className="message-body">
           <p>
@@ -13,6 +14,7 @@ const Testimonials = ({ testimonials }) => (
           <cite> – {testimonial.author}</cite>
         </div>
       </article>
+      </div>
     ))}
   </div>
 )
