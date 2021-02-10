@@ -38,7 +38,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container py-4">
+        <div className="container py-2">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Hjertekrøll - EQ Terapi">
               <img src={logo} alt="Hjertekrøll - EQ Terapi"/>
@@ -71,7 +71,7 @@ const Navbar = class extends React.Component {
               </Link>
 
             </div>
-            <div className="navbar-end has-text-centered">
+            <div className="navbar-end has-text-centered my-2">
                 <Link to="/bestill-time" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
             </div>
           </div>
