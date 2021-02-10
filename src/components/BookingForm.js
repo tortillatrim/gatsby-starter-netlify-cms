@@ -38,7 +38,7 @@ const BookingForm = class BookingForm extends React.Component {
         <form
           name="booking"
           method="post"
-          action="thanks/"
+          action="/bestill-time/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
