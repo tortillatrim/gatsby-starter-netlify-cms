@@ -2,9 +2,11 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import BookingForm from '../../components/BookingForm'
 import Map from '../../components/Map'
+import { Helmet } from 'react-helmet'
 
 export default () => (
   <Layout>
+    <Helmet title="Bestill time | Hjertekrøll" />
     <section className="has-background-info-light ">
       <div className="section">
         <div className="container content">

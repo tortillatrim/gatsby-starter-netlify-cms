@@ -135,7 +135,7 @@ const Terapeut = ({ data }) => {
         description={terapeut.frontmatter.description}
         image={terapeut.frontmatter.image}
         helmet={
-          <Helmet titleTemplate="%s | EQ Terapeut">
+          <Helmet titleTemplate="%s | Hjertekrøll">
             <title>{`${terapeut.frontmatter.name}`}</title>
             <meta
               name="description"

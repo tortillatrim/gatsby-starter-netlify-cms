@@ -56,10 +56,8 @@ export const IndexPageTemplate = ({
       </div>
     </section>
 
-    <section className="hero has-background-info-light">
-      <div className="hero-body">
-
-        <div className="container px-5">
+    <section className="has-background-info-light">
+        <div className="section container">
           <h2 className="title">Du finner oss her</h2>
           <div className="columns is-tablet">
             <div className="column">
@@ -69,8 +67,8 @@ export const IndexPageTemplate = ({
 
               <br />
               <a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
-                Finn reisemåte
-                <i className="material-icons pl-3">directions</i>
+                <i className="material-icons pr-3">directions</i>
+                Åpne veibeskrivelse
               </a>
             </div>
             <div className="column">
@@ -78,7 +76,6 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <section className="section container content">

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
 import QAs from '../components/QAs'
@@ -16,6 +17,7 @@ export const ContactPageTemplate = ({ title, qaDescription, content, contentComp
 
   return (
     <div>
+      <Helmet title="Kontakt | Hjertekrøll" />
       <section className="section">
         <div className="container content">
           <h1>

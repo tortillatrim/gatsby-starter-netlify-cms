@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -9,6 +10,7 @@ export const PersonvernerklaeringPageTemplate = ({ title, content, contentCompon
 
   return (
     <section className="section">
+      <Helmet title="Personvernerklæring | Hjertekrøll" />
       <div className="container">
           <div className="content">
             <h1>
