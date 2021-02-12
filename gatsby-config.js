@@ -41,7 +41,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
