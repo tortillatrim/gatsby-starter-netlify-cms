@@ -11,8 +11,6 @@ Når du sender inn ovennevnte skjema ber vi om ditt navn og din e-postadresse. D
 
 Når du sender en melding, er det kun ansatte som skal besvare henvendelsen som får din kontaktinformasjon. Vi lagrer dine henvendelser for referanse i ettertid. Du kan be om at disse slettes.
 
-Ønsker du å få innsyn i informasjonen vi har om deg eller har andre henvendelser knyttet til personvern ta kontakt her: post@hjertekroll.no
-
 ### Hvem vi deler dine opplysninger med
 
 Vi deler ingen informasjon om besøkende på vår nettside med eksterne aktører.
