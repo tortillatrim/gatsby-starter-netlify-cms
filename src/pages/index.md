@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/Son-lying-on-mothers-laps-945104294_2125x1416-scaled.jpeg
+image: /img/hero.jpeg
 heading: >
   Skap ditt optimale liv!
 subheading: >

@@ -2,7 +2,7 @@
 templateKey: therapists
 name: Anja Søreide
 description: Jobber daglig som terapeut og lærer på EQI. Hun trives med å gi både barn og voksne terapi.
-image: /img/anja-small.png
+image: /img/anja-small.jpg
 tel: 95137906
 email: anja@hjertekroll.no
 workdays:

@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
         backgroundPosition: `top center`,
         color: '#fff'
@@ -123,7 +123,7 @@ export const pageQuery = graphql`
       frontmatter {
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 2048, quality: 90, duotone: { highlight: "#000000", shadow: "#000000", opacity: 45 }) {
               ...GatsbyImageSharpFluid
             }
           }
