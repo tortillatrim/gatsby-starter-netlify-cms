@@ -5,6 +5,10 @@ import Layout from '../components/Layout'
 import TherapistRoll from '../components/TherapistRoll'
 import Testimonials from '../components/Testimonials'
 import Map from '../components/Map'
+import TherapyStep1Icon from '../components/TherapyStep1Icon'
+import TherapyStep2Icon from '../components/TherapyStep2Icon'
+import TherapyStep3Icon from '../components/TherapyStep3Icon'
+import TherapyStep4Icon from '../components/TherapyStep4Icon'
 
 export const IndexPageTemplate = ({
   image,
@@ -47,6 +51,37 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </div>
+
+    <section className="section container">
+        <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">Hva er EQ-terapi?</h3>
+        <h2 className="title mb-6">Identifisere og anerkjenne følelsene dine</h2>
+
+        <div className="columns">
+          <div className="column is-12-mobile is-6-tablet is-3-desktop">
+            <TherapyStep1Icon></TherapyStep1Icon>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Identifiser</h4>
+            <p>EQ-terapi er en terapiform der EQ-terapeuten hjelper deg til å identifisere og anerkjenne følelsene dine. Som EQ-terapeut har jeg et ikke-dømmende menneskesyn, og jeg møter deg akkurat der du er. I denne formen for terapi lukker du øynene, og møter deg selv på dine følelser her og nå.</p>
+          </div>
+          <div className="column is-12-mobile is-6-tablet is-3-desktop">
+            <TherapyStep2Icon></TherapyStep2Icon>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Anerkjenne</h4>
+            <p>Gjennom å identifisere opplevelsen du har i kroppen under en EQ-terapi, er det mitt ansvar å støtte og veilede deg slik at du kan finne tilbake til hvilken hendelse og opplevelse som satte sine spor hos deg som barn, ungdom eller voksen. I denne prosessen vil du oppleve at du får bearbeidet såre erfaringer og traumer som kroppen fortsatt husker, selv om hodet ikke gjør det.</p>
+          </div>
+          <div className="column is-12-mobile is-6-tablet is-3-desktop">
+            <TherapyStep3Icon></TherapyStep3Icon>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Bearbeide</h4>
+            <p>Noen ganger kan situasjoner som ikke opplevdes som traumatiske der og da, ha satt dype spor likevel og påvirket hvordan du idag ser deg selv og andre som voksen. Bearbeiding av disse opplevelsene skjer ved å gå inn og snakke med deg selv, og etter hvert foreldrene dine eller andre som har vært betydningsfulle i din barndom. Dette vil gjøre at du vil oppleve mer glede i hverdagen, og energi og rom til å skape deg mer plass til å leve her og nå.</p>
+          </div>
+          <div className="column is-12-mobile is-6-tablet is-3-desktop">
+            <TherapyStep4Icon></TherapyStep4Icon>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Bli glad i deg selv</h4>
+            <p>Gjennom å ta vare på ditt indre barn, fyller du på din egen tank for egenkjærlighet fordi du lærer å bli glad i deg selv og se at du er akkurat god nok! Du blir din egen beste venn – nummer én i ditt liv – og akkurat slik bygger du opp igjen din egen selvfølelse.
+                Du har nå startet din egen personlige reise fra hodet til hjertet.</p>
+          </div>
+        </div>
+        
+        
+    </section>
 
     <section className="section container">
       <h2 className="title">Møt terapeutene</h2>

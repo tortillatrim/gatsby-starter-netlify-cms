@@ -18,14 +18,14 @@ const Footer = class extends React.Component {
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
+            <div style={{ maxWidth: '100vw' }} className="columns is-gapless">
 
               <div className="column is-3">
                 <Link to="/bestill-time" className="button cta-button is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
               </div>
               <div className="column is-3">
                 <section className="menu">
-                  <ul className="menu-list">
+                  <ul className="menu-list mt-0">
                     <li>
                       <Link to="/" className="navbar-item">
                         Hjem
@@ -41,7 +41,7 @@ const Footer = class extends React.Component {
               </div>
               <div className="column is-3">
                 <section>
-                  <ul className="menu-list">
+                  <ul className="menu-list mt-0">
                     <li>
                       <Link className="navbar-item" to="/terapeuter">
                         Terapeuter
