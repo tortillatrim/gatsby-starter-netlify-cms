@@ -56,7 +56,7 @@ export const IndexPageTemplate = ({
         <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">Hva er EQ-terapi?</h3>
         <h2 className="title mb-6">Identifisere og anerkjenne følelsene dine</h2>
 
-        <div className="columns">
+        <div className="columns is-multiline">
           <div className="column is-12-mobile is-6-tablet is-3-desktop">
             <TherapyStep1Icon></TherapyStep1Icon>
             <h4 className="is-size-5 mt-1 has-text-weight-semibold">Identifiser</h4>
