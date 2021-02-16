@@ -121,8 +121,6 @@ $menu-label-color: $white-ter
     display: inline
 
 // blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
@@ -176,6 +174,12 @@ $menu-label-color: $white-ter
     flex-basis: 50%;
 
 +mobile
+  footer .menu-list
+    margin-top: 0
+  footer .cta-button
+    margin-bottom: 1em
+  footer .social
+    padding: 1em 0
   .column-mob-inline
     display: inline-block
   .blog-list-item header

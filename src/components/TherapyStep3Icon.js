@@ -1,8 +1,10 @@
 import React from 'react';
-import {motion } from 'framer-motion';
+import {motion, useAnimation } from 'framer-motion';
 
 
 const TherapyStep3Icon = () => {
+
+  const controls = useAnimation();
 
   const transition = {
     delay: 4,
@@ -15,7 +17,7 @@ const TherapyStep3Icon = () => {
   return (
     <motion.svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="48" viewBox="0 0 24 24" width="48" id="aniIcon"
       initial="hidden"
-      animate="visible"
+      animate={controls}
     >
       <g><rect fill="none" height="24" width="24" /></g>
       <g><g>

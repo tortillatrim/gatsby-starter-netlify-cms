@@ -19,13 +19,12 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: '100vw' }} className="columns is-gapless">
-
               <div className="column is-3">
                 <Link to="/bestill-time" className="button cta-button is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
               </div>
               <div className="column is-3">
                 <section className="menu">
-                  <ul className="menu-list mt-0">
+                  <ul className="menu-list">
                     <li>
                       <Link to="/" className="navbar-item">
                         Hjem
@@ -36,20 +35,20 @@ const Footer = class extends React.Component {
                         Om oss
                       </Link>
                     </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-3">
-                <section>
-                  <ul className="menu-list mt-0">
                     <li>
                       <Link className="navbar-item" to="/terapeuter">
                         Terapeuter
                       </Link>
                     </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-3">
+                <section>
+                  <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/contact">
-                        Kontakt oss
+                        Kontakt
                       </Link>
                     </li>
                     <li>
@@ -60,7 +59,8 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-3 social">
+              <div className="column is-3 ">
+                <div className="social">
                 <a title="facebook" href="https://facebook.com/hjertekroll">
                   <img
                     src={facebook}
@@ -75,6 +75,7 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
+                </div>
               </div>
             </div>
           </div>

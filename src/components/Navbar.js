@@ -40,9 +40,9 @@ const Navbar = class extends React.Component {
       >
         <div className="container py-2">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Hjertekrøll - EQ Terapi">
-              <img src={logo} alt="Hjertekrøll - EQ Terapi"/>
-              <span className="ml-3 is-size-5 has-text-weight-bold" style={{color: 'rgb(97 109 68)'}}>EQ Terapi</span>
+            <Link to="/" className="navbar-item" title="Hjertekrøll | EQ-Terapi">
+              <img src={logo} alt="Hjertekrøll | EQ-Terapi"/>
+              <span className="ml-3 is-size-5 has-text-weight-bold" style={{color: 'rgb(97 109 68)'}}>EQ-Terapi</span>
             </Link>
             {/* Hamburger menu */}
             <div
