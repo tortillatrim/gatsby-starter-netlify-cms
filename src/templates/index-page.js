@@ -14,6 +14,15 @@ export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
+  stepHeader,
+  step1Title,
+  step1Text,
+  step2Title,
+  step2Text,
+  step3Title,
+  step3Text,
+  step4Title,
+  step4Text,
   testimonials,
 }) => (
   <div>
@@ -54,33 +63,30 @@ export const IndexPageTemplate = ({
 
     <section className="section container">
         <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">Hva er EQ-terapi?</h3>
-        <h2 className="title mb-6">Identifisere og anerkjenne følelsene dine</h2>
+        <h2 className="title mb-6">{stepHeader}</h2>
 
         <div className="columns is-multiline">
           <div className="column is-12-mobile is-6-tablet is-3-desktop">
             <TherapyStep1Icon></TherapyStep1Icon>
-            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Identifiser</h4>
-            <p>EQ-terapi er en terapiform der EQ-terapeuten hjelper deg til å identifisere og anerkjenne følelsene dine. Som EQ-terapeut har jeg et ikke-dømmende menneskesyn, og jeg møter deg akkurat der du er. I denne formen for terapi lukker du øynene, og møter deg selv på dine følelser her og nå.</p>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">{step1Title}</h4>
+            <p>{step1Text}</p>
           </div>
           <div className="column is-12-mobile is-6-tablet is-3-desktop">
             <TherapyStep2Icon></TherapyStep2Icon>
-            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Anerkjenne</h4>
-            <p>Gjennom å identifisere opplevelsen du har i kroppen under en EQ-terapi, er det mitt ansvar å støtte og veilede deg slik at du kan finne tilbake til hvilken hendelse og opplevelse som satte sine spor hos deg som barn, ungdom eller voksen. I denne prosessen vil du oppleve at du får bearbeidet såre erfaringer og traumer som kroppen fortsatt husker, selv om hodet ikke gjør det.</p>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">{step2Title}</h4>
+            <p>{step2Text}</p>
           </div>
           <div className="column is-12-mobile is-6-tablet is-3-desktop">
             <TherapyStep3Icon></TherapyStep3Icon>
-            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Bearbeide</h4>
-            <p>Noen ganger kan situasjoner som ikke opplevdes som traumatiske der og da, ha satt dype spor likevel og påvirket hvordan du idag ser deg selv og andre som voksen. Bearbeiding av disse opplevelsene skjer ved å gå inn og snakke med deg selv, og etter hvert foreldrene dine eller andre som har vært betydningsfulle i din barndom. Dette vil gjøre at du vil oppleve mer glede i hverdagen, og energi og rom til å skape deg mer plass til å leve her og nå.</p>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">{step3Title}</h4>
+            <p>{step3Text}</p>
           </div>
           <div className="column is-12-mobile is-6-tablet is-3-desktop">
             <TherapyStep4Icon></TherapyStep4Icon>
-            <h4 className="is-size-5 mt-1 has-text-weight-semibold">Bli glad i deg selv</h4>
-            <p>Gjennom å ta vare på ditt indre barn, fyller du på din egen tank for egenkjærlighet fordi du lærer å bli glad i deg selv og se at du er akkurat god nok! Du blir din egen beste venn – nummer én i ditt liv – og akkurat slik bygger du opp igjen din egen selvfølelse.
-                Du har nå startet din egen personlige reise fra hodet til hjertet.</p>
+            <h4 className="is-size-5 mt-1 has-text-weight-semibold">{step4Title}</h4>
+            <p>{step4Text}</p>
           </div>
         </div>
-        
-        
     </section>
 
     <section className="section container">
@@ -96,8 +102,8 @@ export const IndexPageTemplate = ({
           <h2 className="title">Du finner oss her</h2>
           <div className="columns is-tablet">
             <div className="column">
-              <strong>SKJOLD HELSEHUS</strong>
-              <div>SÆTERVEGEN 25</div>
+            <strong>Skjold helsehus</strong>
+              <div>Sætervegne 25</div>
               <div>5236 RÅDAL</div>
 
               <br />
@@ -136,6 +142,15 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        stepHeader={frontmatter.stepHeader}
+        step1Title={frontmatter.step1Title}
+        step1Text={frontmatter.step1Text}
+        step2Title={frontmatter.step2Title}
+        step2Text={frontmatter.step2Text}
+        step3Title={frontmatter.step3Title}
+        step3Text={frontmatter.step3Text}
+        step4Title={frontmatter.step4Title}
+        step4Text={frontmatter.step4Text}
         testimonials={frontmatter.testimonials}
       />
     </Layout>
@@ -165,6 +180,15 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        stepHeader
+        step1Title
+        step1Text
+        step2Title
+        step2Text
+        step3Title
+        step3Text
+        step4Title
+        step4Text
         testimonials {
           author
           quote

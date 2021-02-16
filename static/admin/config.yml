@@ -38,6 +38,15 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
+          - {label: StepHeader, name: stepHeader, widget: string}
+          - {label: StepTitle1, name: stepTitle1, widget: string}
+          - {label: StepText1, name: stepText1, widget: text}
+          - {label: StepTitle2, name: stepTitle2, widget: string}
+          - {label: StepText2, name: stepText2, widget: text}
+          - {label: StepTitle3, name: stepTitle3, widget: string}
+          - {label: StepText3, name: stepText3, widget: text}
+          - {label: StepTitle4, name: stepTitle4, widget: string}
+          - {label: StepText4, name: stepText4, widget: text}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - file: "src/pages/contact/index.md"
         label: "Contact"

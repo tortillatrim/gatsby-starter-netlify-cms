@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {motion } from 'framer-motion';
 
 
-const TherapyStep2Icon = (props) => {
+const TherapyStep2Icon = () => {
 
   const variants = {
     hidden: { 
@@ -14,10 +13,10 @@ const TherapyStep2Icon = (props) => {
       opacity: [1, 0, 1],
       scale: [1, 0.8, 1],
       transition: {
-        duration: 2,
+        duration: 1,
         delay: 0,
         repeat: Infinity,
-        repeatDelay: 1,
+        repeatDelay: 8,
         ease: "easeInOut"
       }
      },
