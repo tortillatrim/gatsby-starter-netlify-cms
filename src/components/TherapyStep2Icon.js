@@ -4,8 +4,6 @@ import {motion } from 'framer-motion';
 
 const TherapyStep2Icon = () => {
 
-  const controls = useAnimation();
-
   const variants = {
     hidden: { 
       opacity: 1,
