@@ -61,8 +61,8 @@ export const IndexPageTemplate = ({
           <h2 className="title">Du finner oss her</h2>
           <div className="columns is-tablet">
             <div className="column">
-              <strong>SKJOLD HELSEHUS</strong>
-              <div>SÆTERVEGEN 25</div>
+              <strong>Skjold Helsehus</strong>
+              <div>Sætervegen 25</div>
               <div>5236 RÅDAL</div>
 
               <br />
