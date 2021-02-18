@@ -6,5 +6,8 @@ heading: |
 subheading: >
   Rydd opp i sekken med ubearbeidede følelser, slik at du ser din egen verdi og
   tør å være mer ærlig om hvem du er.
-testimonials: []
+testimonials:
+  - author: Mann, 40 år
+    quote: >-
+      Gjenta etter meg: Føleser! Føleser! Føleser!
 ---

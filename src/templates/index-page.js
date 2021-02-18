@@ -78,10 +78,10 @@ export const IndexPageTemplate = ({
         </div>
     </section>
 
-    <section className="section container content">
+    {/* <section className="section container content">
       <h2 className="title">Tilbakemeldinger</h2>
       <Testimonials testimonials={testimonials} />
-    </section>
+    </section> */}
   </div>
 )
 
