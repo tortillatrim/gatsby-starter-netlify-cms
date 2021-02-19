@@ -44,7 +44,38 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/contact/*`, `/bestill-time/*`, `/personvernerklaering`]
+        exclude: [`/contact/*`, `/bestill-time/*`, `/personvernerklaering`],
+        createLinkInHead: true,
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        resolveSiteUrl: ({ site }) => {
+          return site.siteMetadata.siteUrl;
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map((node) => {
+            let pri = 0.7;
+            if(node.path == '/')
+              pri = 1.0
+            if(node.path == '/bestill-time/')
+              pri = 0.9
+
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `daily`,
+              priority: pri,
+            };
+          }),
       },
     },
     {
