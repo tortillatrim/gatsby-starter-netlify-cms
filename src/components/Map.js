@@ -15,8 +15,8 @@ const Map = ( props ) => {
         />
         <Marker position={[60.30069163013214, 5.339820340965894]}>
             <Popup>
-              <strong>SKJOLD HELSEHUS</strong>
-              <div>SÆTERVEGEN 25</div>
+              <strong>Skjold Helsehus</strong>
+              <div>Sætervegen 25</div>
               <div>5236 RÅDAL</div>
             </Popup>
         </Marker>
