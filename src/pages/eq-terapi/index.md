@@ -2,7 +2,7 @@
 templateKey: therapy-page
 image: /img/hero.jpeg
 heading: |
-  Skap ditt optimale liv!
+  EQ-Terapi
 subheading: >
   Rydd opp i sekken med ubearbeidede følelser, slik at du ser din egen verdi og tør å være mer ærlig om hvem du er.
 
