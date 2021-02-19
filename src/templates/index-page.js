@@ -4,12 +4,22 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import TherapistRoll from '../components/TherapistRoll'
 import Testimonials from '../components/Testimonials'
+import TherapyHero from '../components/TherapyHero'
 import Map from '../components/Map'
 
 export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
+  stepHeader,
+  step1Title,
+  step1Text,
+  step2Title,
+  step2Text,
+  step3Title,
+  step3Text,
+  step4Title,
+  step4Text,
   testimonials,
 }) => (
   <div>
@@ -48,6 +58,19 @@ export const IndexPageTemplate = ({
       </div>
     </div>
 
+    {/* <TherapyHero 
+      stepHeader={stepHeader}
+      step1Title={step1Title}
+      step1Text={step1Text}
+      step2Title={step2Title}
+      step2Text={step2Text}
+      step3Title={step3Title}
+      step3Text={step3Text}
+      step4Title={step4Title}
+      step4Text={step4Text}
+    ></TherapyHero>
+    */}
+    
     <section className="section container">
       <h2 className="title">Møt terapeutene</h2>
       <TherapistRoll />
@@ -101,6 +124,15 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        stepHeader={frontmatter.stepHeader}
+        step1Title={frontmatter.step1Title}
+        step1Text={frontmatter.step1Text}
+        step2Title={frontmatter.step2Title}
+        step2Text={frontmatter.step2Text}
+        step3Title={frontmatter.step3Title}
+        step3Text={frontmatter.step3Text}
+        step4Title={frontmatter.step4Title}
+        step4Text={frontmatter.step4Text}
         testimonials={frontmatter.testimonials}
       />
     </Layout>
@@ -130,6 +162,15 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        stepHeader
+        step1Title
+        step1Text
+        step2Title
+        step2Text
+        step3Title
+        step3Text
+        step4Title
+        step4Text
         testimonials {
           author
           quote
