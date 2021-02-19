@@ -12,7 +12,6 @@ export default class CourseIndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <h1>Kurs</h1>
-              <p>Vi hjelper voksne med å møte barn på en måte som fremmer god psykisk helse</p>
               <CourseRoll />
             </div>
           </div>

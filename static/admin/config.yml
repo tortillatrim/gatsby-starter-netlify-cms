@@ -50,6 +50,14 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
+      - file: "src/pages/eq-terapi/index.md"
+        label: "EQ-Terapi Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "therapy-page"}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading, widget: string}
           - {label: StepHeader, name: stepHeader, widget: string}
           - {label: StepTitle1, name: stepTitle1, widget: string}
           - {label: StepText1, name: stepText1, widget: text}
@@ -60,6 +68,14 @@ collections:
           - {label: StepTitle4, name: stepTitle4, widget: string}
           - {label: StepText4, name: stepText4, widget: text}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - file: "src/pages/kompetanse/index.md"
+        label: "Kompetanse Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "education-page"}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading, widget: string}
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"

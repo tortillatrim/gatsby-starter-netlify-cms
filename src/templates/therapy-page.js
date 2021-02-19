@@ -32,12 +32,7 @@ export const TherapyPageTemplate = ({
         color: '#fff'
       }}
     >
-      <div
-        className="px-2"
-        style={{
-          maxWidth: '900px',
-        }}
-      >
+      <div className="section container">
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
         >

@@ -2,15 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import CourseRoll from '../components/CourseRoll'
 
-export const IndexPageTemplate = ({
+export const EducationPageTemplate = ({
   image,
   heading,
   subheading,
 }) => (
   <div>
     <div
-      className="full-width-image large margin-top-0"
+      className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
@@ -18,7 +19,7 @@ export const IndexPageTemplate = ({
         color: '#fff'
       }}
     >
-      <div className="section container">
+     <div className="section container">
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
         >
@@ -32,36 +33,31 @@ export const IndexPageTemplate = ({
         >
           {subheading}
         </p>
-        <div className="py-5">
-          <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
-        </div>
       </div>
     </div>
+
     <section className="section container">
-    <div className="columns">
-      <div className="column">
-        First column
+      <h2 className="title">Våre nettkurs</h2>
+      <CourseRoll />
+      <div className="has-text-centered">
+        <Link className="btn" to="/terapeuter">Til kurs</Link>
       </div>
-      <div className="column">
-        Second column
-      </div>
-    </div>
     </section>
   </div>
 )
 
-IndexPageTemplate.propTypes = {
+EducationPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   subheading: PropTypes.string,
 }
 
-const IndexPage = ({ data }) => {
+const EducationPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <EducationPageTemplate
         image={frontmatter.image}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -70,7 +66,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-IndexPage.propTypes = {
+EducationPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -78,11 +74,11 @@ IndexPage.propTypes = {
   }),
 }
 
-export default IndexPage
+export default EducationPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query EducationPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "education-page" } }) {
       frontmatter {
         image {
           childImageSharp {

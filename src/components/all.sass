@@ -14,6 +14,8 @@ $body-background-color: #fff
 $navbar-tab-active-border-bottom-color: $hjertekroll-green
 $navbar-item-active-color: $hjertekroll-green
 $navbar-item-hover-color: $hjertekroll-green
+$navbar-tab-hover-border-bottom-color: transparent
+$navbar-tab-active-color: $hjertekroll-green
 
 p
   max-width: 75ex
@@ -30,28 +32,12 @@ form
   font-family: 'Material Icons';
   font-size: 24px;
 
-
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
-
 .full-width-image
     width: 100vw
     height: 400px
     background-size: cover
     background-position: bottom
     display: flex
-    justify-content: center
     align-items: center
     &.large
       height: 600px
@@ -177,8 +163,12 @@ $menu-label-color: $white-ter
 +tablet-only
   .roll-list-item .featured-thumbnail
     flex-basis: 50%;
+  .navbar-item.is-tab.is-active
+    border-bottom: none
 
 +mobile
+  .navbar-item.is-tab.is-active
+    border-bottom: none
   footer .menu-list
     margin-top: 0
   footer .cta-button

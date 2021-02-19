@@ -38,7 +38,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container py-2">
+        <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Hjertekrøll | EQ-Terapi">
               <img src={logo} alt="Hjertekrøll | EQ-Terapi"/>
@@ -59,22 +59,22 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about" activeClassName="is-active">
+            <div className="navbar-start has-text-centered is-align-content-center">
+              <Link className="navbar-item is-tab" to="/about" activeClassName="is-active">
                 Om oss
               </Link>
-              <Link className="navbar-item" to="/eq-terapi" partiallyActive={true} activeClassName="is-active">
+              <Link className="navbar-item is-tab" to="/eq-terapi" partiallyActive={true} activeClassName="is-active">
                 EQ-Terapi
               </Link>
-              <Link className="navbar-item" to="/kurs" partiallyActive={true} activeClassName="is-active">
-                Kurs
+              <Link className="navbar-item is-tab" to="/kompetanse" partiallyActive={true} activeClassName="is-active">
+                Kurs og kompetanse
               </Link>
-              <Link className="navbar-item" to="/contact" activeClassName="is-active">
+              <Link className="navbar-item is-tab" to="/contact" activeClassName="is-active">
                 Kontakt
               </Link>
 
             </div>
-            <div className="navbar-end has-text-centered my-2">
+            <div className="navbar-end has-text-centered my-3">
                 <Link to="/bestill-time" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
             </div>
           </div>
