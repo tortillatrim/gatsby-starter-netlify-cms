@@ -2,29 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import TherapistRoll from '../components/TherapistRoll'
-import Testimonials from '../components/Testimonials'
-import TherapyHero from '../components/TherapyHero'
-import Map from '../components/Map'
 
 export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
-  stepHeader,
-  step1Title,
-  step1Text,
-  step2Title,
-  step2Text,
-  step3Title,
-  step3Text,
-  step4Title,
-  step4Text,
-  testimonials,
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image large margin-top-0"
       style={{
         backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
@@ -52,59 +38,20 @@ export const IndexPageTemplate = ({
           {subheading}
         </p>
         <div className="py-5">
-          <Link to="/bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
           <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
         </div>
       </div>
     </div>
-
-    {/* <TherapyHero 
-      stepHeader={stepHeader}
-      step1Title={step1Title}
-      step1Text={step1Text}
-      step2Title={step2Title}
-      step2Text={step2Text}
-      step3Title={step3Title}
-      step3Text={step3Text}
-      step4Title={step4Title}
-      step4Text={step4Text}
-    ></TherapyHero>
-    */}
-    
     <section className="section container">
-      <h2 className="title">Møt terapeutene</h2>
-      <TherapistRoll />
-      <div className="has-text-centered">
-        <Link className="btn" to="/terapeuter">Til terapeuter</Link>
+    <div className="columns">
+      <div className="column">
+        First column
       </div>
+      <div className="column">
+        Second column
+      </div>
+    </div>
     </section>
-
-    <section className="has-background-info-light">
-        <div className="section container">
-          <h2 className="title">Du finner oss her</h2>
-          <div className="columns is-tablet">
-            <div className="column">
-              <strong>Skjold Helsehus</strong>
-              <div>Sætervegen 25</div>
-              <div>5236 RÅDAL</div>
-
-              <br />
-              <a href="https://maps.google.com/maps?&amp;daddr=Sætervegen 25,5236,Rådal,NO Rådal NO" rel="noopener noreferrer" target="_blank" className="is-link button" aria-label="Få beskrivelser Sætervegen 25,5236,Rådal,NO" role="button">
-                <i className="material-icons pr-3">directions</i>
-                Åpne veibeskrivelse
-              </a>
-            </div>
-            <div className="column">
-              <Map></Map>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    {/* <section className="section container content">
-      <h2 className="title">Tilbakemeldinger</h2>
-      <Testimonials testimonials={testimonials} />
-    </section> */}
   </div>
 )
 
@@ -112,7 +59,6 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  testimonials: PropTypes.array,
 }
 
 const IndexPage = ({ data }) => {
@@ -124,16 +70,6 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        stepHeader={frontmatter.stepHeader}
-        step1Title={frontmatter.step1Title}
-        step1Text={frontmatter.step1Text}
-        step2Title={frontmatter.step2Title}
-        step2Text={frontmatter.step2Text}
-        step3Title={frontmatter.step3Title}
-        step3Text={frontmatter.step3Text}
-        step4Title={frontmatter.step4Title}
-        step4Text={frontmatter.step4Text}
-        testimonials={frontmatter.testimonials}
       />
     </Layout>
   )
@@ -162,19 +98,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        stepHeader
-        step1Title
-        step1Text
-        step2Title
-        step2Text
-        step3Title
-        step3Text
-        step4Title
-        step4Text
-        testimonials {
-          author
-          quote
-        }
       }
     }
   }

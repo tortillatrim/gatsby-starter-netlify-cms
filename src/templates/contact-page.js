@@ -41,7 +41,7 @@ export const ContactPageTemplate = ({ title, qaDescription, content, contentComp
                   <i className="material-icons mr-3">phone</i>95137906
                 </div>
                 <div className="is-flex pt-3">
-                  <i className="material-icons mr-3">email</i><a>post@hjertekroll.no</a>
+                  <i className="material-icons mr-3">email</i><a href="mailto: post@hjertekroll.no">post@hjertekroll.no</a>
                 </div>
                 <div className="is-flex pt-3">
                   <i className="material-icons mr-3">place</i>Skjold Helsehus - Sætervegen 25, 5236 Rådal

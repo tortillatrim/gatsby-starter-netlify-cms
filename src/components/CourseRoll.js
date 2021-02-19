@@ -3,44 +3,44 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class TherapistRoll extends React.Component {
+class CourseRoll extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: therapists } = data.allMarkdownRemark
+    const { edges: course } = data.allMarkdownRemark
 
     return (
       <div className="columns is-multiline">
-        {therapists &&
-          therapists.map(({ node: therapist }) => (
-            <div key={therapist.id} className="column is-6">
+        {course &&
+          course.map(({ node: course }) => (
+            <div key={course.id} className="column is-6">
               <article
                 className={`roll-list-item tile is-child py-5`}
               >
                 <header>
-                  {therapist.frontmatter.image ? (
+                  {course.frontmatter.image ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: therapist.frontmatter.image,
-                          alt: `featured image thumbnail for therapist ${therapist.frontmatter.name}`,
+                          image: course.frontmatter.image,
+                          alt: `featured image thumbnail for course ${course.frontmatter.name}`,
                         }}
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <p>
                     <Link
                       className="title has-text-primary is-size-4"
-                      to={therapist.fields.slug}
+                      to={course.fields.slug}
                     >
-                      {therapist.frontmatter.name}
+                      {course.frontmatter.name}
                     </Link>
                   </p>
                 </header>
                 <p>
-                  {therapist.frontmatter.description}
+                  {course.frontmatter.description}
                   <br />
                   <br />
-                  <Link className="button" to={therapist.fields.slug}>
+                  <Link className="button" to={course.fields.slug}>
                     Velg →
                   </Link>
                 </p>
@@ -52,7 +52,7 @@ class TherapistRoll extends React.Component {
   }
 }
 
-TherapistRoll.propTypes = {
+CourseRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -63,9 +63,9 @@ TherapistRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query TherapistRollQuery {
+      query CourseRollQuery {
         allMarkdownRemark(
-          filter: { frontmatter: { templateKey: { eq: "therapists" } } }
+          filter: { frontmatter: { templateKey: { eq: "course" } } }
         ) {
           edges {
             node {
@@ -90,6 +90,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <TherapistRoll data={data} count={count} />}
+    render={(data, count) => <CourseRoll data={data} count={count} />}
   />
 )

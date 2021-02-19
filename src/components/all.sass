@@ -53,6 +53,9 @@ form
     display: flex
     justify-content: center
     align-items: center
+    &.large
+      height: 600px
+
 
 .btn
     display: inline-block
@@ -88,7 +91,9 @@ footer.footer
   background-color: transparent
 footer .column
   padding-right: 0
-
+.navbar-burger.burger
+  background-color: transparent !important
+  border: none
 .table
   background-color: transparent !important
 
@@ -121,10 +126,10 @@ $menu-label-color: $white-ter
     display: inline
 
 // blog roll
-.blog-list-item header
+.roll-list-item header
   display: flex;
   margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
+.roll-list-item .featured-thumbnail
   flex-basis: 25%;
   margin: 0 1.5em 0 0;
   
@@ -170,7 +175,7 @@ $menu-label-color: $white-ter
     background-attachment: fixed
 
 +tablet-only
-  .blog-list-item .featured-thumbnail
+  .roll-list-item .featured-thumbnail
     flex-basis: 50%;
 
 +mobile
@@ -182,9 +187,9 @@ $menu-label-color: $white-ter
     padding: 1em 0
   .column-mob-inline
     display: inline-block
-  .blog-list-item header
+  .roll-list-item header
     display: block
-  .blog-list-item .featured-thumbnail
+  .roll-list-item .featured-thumbnail
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;

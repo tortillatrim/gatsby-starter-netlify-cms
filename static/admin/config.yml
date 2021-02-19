@@ -12,6 +12,18 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "kurs"
+    label: "Kurs"
+    folder: "src/pages/kurs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "terapeut"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "terapeuter"
     label: "Terapeuter"
     folder: "src/pages/terapeuter"

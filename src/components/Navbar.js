@@ -42,10 +42,10 @@ const Navbar = class extends React.Component {
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Hjertekrøll | EQ-Terapi">
               <img src={logo} alt="Hjertekrøll | EQ-Terapi"/>
-              <span className="ml-3 is-size-5 has-text-weight-bold" style={{color: 'rgb(97 109 68)'}}>EQ-Terapi</span>
+              <span className="ml-3 is-size-5 has-text-weight-semibold" style={{color: 'rgb(97 109 68)'}}>Hjertekrøll</span>
             </Link>
             {/* Hamburger menu */}
-            <div
+            <button type="button"
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
@@ -53,7 +53,7 @@ const Navbar = class extends React.Component {
               <span />
               <span />
               <span />
-            </div>
+            </button>
           </div>
           <div
             id="navMenu"
@@ -63,8 +63,11 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/about" activeClassName="is-active">
                 Om oss
               </Link>
-              <Link className="navbar-item" to="/terapeuter" partiallyActive={true} activeClassName="is-active">
-                Terapeuter
+              <Link className="navbar-item" to="/eq-terapi" partiallyActive={true} activeClassName="is-active">
+                EQ-Terapi
+              </Link>
+              <Link className="navbar-item" to="/kurs" partiallyActive={true} activeClassName="is-active">
+                Kurs
               </Link>
               <Link className="navbar-item" to="/contact" activeClassName="is-active">
                 Kontakt

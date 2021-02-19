@@ -11,7 +11,7 @@ export default () => (
       <div className="section">
         <div className="container content">
           <h1 className="title">Bestill time</h1>
-          <p>Ønsker du å bestille time? Ring oss, send e-post eller fyll ut kontaktskjema under.</p>
+          <p>Ønsker du å bestille time til EQ-terapi? Ring oss, send e-post eller fyll ut kontaktskjema under.</p>
           <div className="columns is-tablet py-3">
             <div className="column mb-4">
               <BookingForm />
