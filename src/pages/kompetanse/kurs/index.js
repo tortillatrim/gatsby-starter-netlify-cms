@@ -1,18 +1,18 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Layout from '../../components/Layout'
-import TherapistRoll from '../../components/TherapistRoll'
+import Layout from '../../../components/Layout'
+import CourseRoll from '../../../components/CourseRoll'
 
-export default class TerapistIndexPage extends React.Component {
+export default class CourseIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title="EQ Terapeuter | Hjertekrøll" />
+        <Helmet title="Kurs | Hjertekrøll" />
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Terapeuter</h1>
-              <TherapistRoll />
+              <h1>Kurs</h1>
+              <CourseRoll />
             </div>
           </div>
         </section>

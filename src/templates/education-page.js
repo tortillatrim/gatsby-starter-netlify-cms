@@ -38,7 +38,7 @@ export const EducationPageTemplate = ({
       <h2 className="title">Våre nettkurs</h2>
       <CourseRoll />
       <div className="has-text-centered">
-        <Link className="btn" to="/kurs">Til kurs</Link>
+        <Link className="btn" to="kurs">Til kurs</Link>
       </div>
     </section>
   </div>
