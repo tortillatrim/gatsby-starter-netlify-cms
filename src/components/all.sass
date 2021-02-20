@@ -36,9 +36,9 @@ form
     width: 100vw
     height: 400px
     background-size: cover
-    background-position: bottom
-    display: flex
-    align-items: center
+    background-position: top center
+    // display: flex
+    // align-items: center
     &.large
       height: 600px
 
@@ -132,6 +132,41 @@ $menu-label-color: $white-ter
   height: 300px
   display: flex
   align-items: flex-end
+
+.main-action-card
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: $box-shadow
+  position: relative
+  height: 100%
+  p
+    color: black
+  .action-icon
+    position: absolute
+    bottom: -1.2em
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    width: 2.4em
+    height: 2.4em
+    background-color: white
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+  .action-icon-inner
+    background-color: $primary
+    width: 2em
+    height: 2em
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+  &:hover .action-icon-inner
+    background-color: $hjertekroll-green-dark
+
 
 .contact-icon
   border-radius: 50%

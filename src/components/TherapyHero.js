@@ -9,7 +9,7 @@ const TherapyHero = class extends React.Component {
 
   render() {
     return (
-      <section className="section container">
+      <section className="section container content">
         <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">Hva er EQ-terapi?</h3>
         <h2 className="title mb-6">{this.props.stepHeader}</h2>
 
