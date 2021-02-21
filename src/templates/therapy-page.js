@@ -45,7 +45,7 @@ export const TherapyPageTemplate = ({
           {subheading}
         </p>
         <div className="py-5">
-          <Link to="/bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
+          <Link to="bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
         </div>
       </div>
     </div>

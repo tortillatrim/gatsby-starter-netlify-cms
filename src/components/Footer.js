@@ -20,7 +20,7 @@ const Footer = class extends React.Component {
           <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: '100vw' }} className="columns is-gapless">
               <div className="column is-3">
-                <Link to="/bestill-time" className="button cta-button is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
+                <Link to="/eq-terapi/bestill-time" className="button cta-button is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
               </div>
               <div className="column is-3">
                 <section className="menu">
