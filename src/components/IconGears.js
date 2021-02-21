@@ -2,7 +2,7 @@ import React from 'react';
 import {motion } from 'framer-motion';
 
 
-const TherapyStep3Icon = () => {
+const IconGears = () => {
 
   const transition = {
     delay: 4,
@@ -39,4 +39,4 @@ const TherapyStep3Icon = () => {
   )
 };
 
-export default TherapyStep3Icon;
+export default IconGears;

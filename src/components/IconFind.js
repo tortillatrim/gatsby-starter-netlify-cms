@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const TherapyStep1Icon = (props) => {
+const IconFind = (props) => {
 
 
   return (
@@ -13,4 +13,4 @@ const TherapyStep1Icon = (props) => {
   )
 };
 
-export default TherapyStep1Icon;
+export default IconFind;

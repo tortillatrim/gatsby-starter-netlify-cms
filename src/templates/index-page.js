@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import TherapyStep4Icon from '../components/TherapyStep4Icon'
-import TherapyStep2Icon from '../components/TherapyStep2Icon'
+import IconHeart from '../components/IconHeart'
+import IconKnowledge from '../components/IconKnowledge'
 import subImg from '../img/sub-hero.jpeg'
 
 export const IndexPageTemplate = ({
@@ -36,7 +36,7 @@ export const IndexPageTemplate = ({
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
-                <TherapyStep4Icon></TherapyStep4Icon>
+                <IconHeart size="64" />
                 <h4 className="is-size-5 mt-1 has-text-weight-semibold">EQ-Terapi</h4>
                 <p>Vi gir EQ-Terapi. bla bla bla </p>
                 <div className="action-icon">
@@ -50,7 +50,7 @@ export const IndexPageTemplate = ({
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/kompetanse">
               <div className="main-action-card has-text-centered p-4 content">
-                <TherapyStep2Icon></TherapyStep2Icon>
+                <IconKnowledge size="64"/>
                 <h4 className="is-size-5 mt-1 has-text-weight-semibold">Kurs og kompetanse</h4>
                 <p>Vi har nettkurs og holder foredrag. bla bla bla </p>
                 <div className="action-icon">

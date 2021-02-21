@@ -2,7 +2,7 @@ import React from 'react';
 import {motion } from 'framer-motion';
 
 
-const TherapyStep2Icon = () => {
+const IconKnowledge = (props) => {
 
   const variants = {
     hidden: { 
@@ -23,8 +23,10 @@ const TherapyStep2Icon = () => {
     
   };
 
+  let size = props.size || '48';
+
   return (
-      <motion.svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="48" viewBox="0 0 24 24" width="48" id="aniIcon"
+      <motion.svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height={size} viewBox="0 0 24 24" width={size}
         initial="hidden"
         animate="visible">
         <g><rect fill="none" height="24" width="24" /></g>
@@ -43,4 +45,4 @@ const TherapyStep2Icon = () => {
   )
 };
 
-export default TherapyStep2Icon;
+export default IconKnowledge;
