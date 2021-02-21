@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Workdays from '../components/Workdays'
-import BookingForm from '../components/BookingForm'
+import BookingForm from '../components/forms/BookingForm'
 
 export const TerapeutTemplate = ({
   content,

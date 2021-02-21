@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import IconFind from './IconFind'
-import IconKnowledge from './IconKnowledge'
-import IconGears from './IconGears'
-import IconHeart from './IconHeart'
+import IconFind from './icons/IconFind'
+import IconKnowledge from './icons/IconKnowledge'
+import IconGears from './icons/IconGears'
+import IconHeart from './icons/IconHeart'
 
 const TherapyHero = class extends React.Component {
 

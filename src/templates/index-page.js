@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import IconHeart from '../components/IconHeart'
-import IconKnowledge from '../components/IconKnowledge'
+import IconHeart from '../components/icons/IconHeart'
+import IconKnowledge from '../components/icons/IconKnowledge'
 import subImg from '../img/sub-hero.jpeg'
 
 export const IndexPageTemplate = ({

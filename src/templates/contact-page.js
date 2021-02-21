@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/forms/ContactForm'
 import QAs from '../components/QAs'
 import Content, { HTMLContent } from '../components/Content'
 

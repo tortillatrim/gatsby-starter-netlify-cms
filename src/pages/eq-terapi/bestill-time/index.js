@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../../components/Layout'
-import BookingForm from '../../../components/BookingForm'
+import BookingForm from '../../../components/forms/BookingForm'
 import Map from '../../../components/Map'
 import { Helmet } from 'react-helmet'
 
