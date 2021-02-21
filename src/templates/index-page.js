@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
             </div>
         </div>
       
-        <div className="columns is-variable is-8 mt-6">
+        <div className="columns is-variable is-6 mt-6">
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
