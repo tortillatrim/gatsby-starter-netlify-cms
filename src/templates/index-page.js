@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import IconHeart from '../components/icons/IconHeart'
-import IconKnowledge from '../components/icons/IconKnowledge'
+import IconOnlineCourse from '../components/icons/IconOnlineCourse'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -11,9 +11,7 @@ export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
-  therapyheading,
   therapydescription,
-  educationheading,
   educationdescription,
   heroimage,
   heroheading,
@@ -70,7 +68,7 @@ export const IndexPageTemplate = ({
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/kompetanse">
               <div className="main-action-card has-text-centered p-4 content">
-                <IconKnowledge size="56"/>
+                <IconOnlineCourse size="56"/>
                 <h4 className="is-size-5 mt-1 has-text-weight-semibold">Nettkurs</h4>
                 <p>{educationdescription}</p>
                 <div className="action-icon">
