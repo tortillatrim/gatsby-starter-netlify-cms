@@ -64,7 +64,7 @@ const Navbar = class extends React.Component {
                 EQ-Terapi
               </Link>
               <Link className="navbar-item is-tab" to="/kompetanse" partiallyActive={true} activeClassName="is-active">
-                Kurs og kompetanse
+                Nettkurs
               </Link>
               <Link className="navbar-item is-tab" to="/about" activeClassName="is-active">
                 Om oss

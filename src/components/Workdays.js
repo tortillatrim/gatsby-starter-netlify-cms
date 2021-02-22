@@ -8,8 +8,8 @@ const Workdays = ({ workdays }) => (
       <tbody>
       {workdays.map((workday) => (
          <tr key={v4()}>
-         <th>{workday.days}</th>
-         <th>{workday.hours}</th>
+         <td>{workday.days}</td>
+         <td>{workday.hours}</td>
        </tr>
       ))}
       </tbody>

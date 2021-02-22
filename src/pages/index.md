@@ -4,7 +4,10 @@ image: /img/hero.jpeg
 heading: |
   Øk din relasjonskompetanse
 subheading: >
-
+therapydescription: >
+  Vi gir EQ-Terapi. bla bla bla
+educationdescription: >
+  Vi har nettkurs. bla bla bla
 heroimage: /img/sub-hero.jpeg
 heroheading: |
   Hvorfor er vi til?

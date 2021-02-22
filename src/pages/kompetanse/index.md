@@ -2,7 +2,7 @@
 templateKey: education-page
 image: /img/hero.jpeg
 heading: |
-  Kurs og kompetanse
+  Nettkurs
 subheading: >
-  Styrke barns selvfølelse, håndtere og forstå følelser, sette grenser på en god måte, styrk din relasjonskompetanse
+  I våre nettkurs ønsker vi å hjelpe voksne til å øke sin relasjonskompetanse.
 ---

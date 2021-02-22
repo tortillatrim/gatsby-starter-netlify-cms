@@ -11,6 +11,10 @@ export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
+  therapyheading,
+  therapydescription,
+  educationheading,
+  educationdescription,
   heroimage,
   heroheading,
   herosubheading,
@@ -53,8 +57,8 @@ export const IndexPageTemplate = ({
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
                 <IconHeart size="56" />
-                <h4 className="is-size-5 mt-1 has-text-weight-semibold">EQ-Terapi</h4>
-                <p>Vi gir EQ-Terapi. bla bla bla </p>
+                <h4 className="is-size-5 mt-1 has-text-weight-semibold">EQ-Tarapi</h4>
+                <p>{therapydescription}</p>
                 <div className="action-icon">
                   <div className="action-icon-inner">
                   <i className="material-icons">arrow_forward</i>
@@ -67,8 +71,8 @@ export const IndexPageTemplate = ({
             <Link  to="/kompetanse">
               <div className="main-action-card has-text-centered p-4 content">
                 <IconKnowledge size="56"/>
-                <h4 className="is-size-5 mt-1 has-text-weight-semibold">Kurs og kompetanse</h4>
-                <p>Vi har nettkurs og holder foredrag. bla bla bla </p>
+                <h4 className="is-size-5 mt-1 has-text-weight-semibold">Nettkurs</h4>
+                <p>{educationdescription}</p>
                 <div className="action-icon">
                   <div className="action-icon-inner">
                   <i className="material-icons">arrow_forward</i>
@@ -118,6 +122,8 @@ const IndexPage = ({ data }) => {
         image={index.frontmatter.image}
         heading={index.frontmatter.heading}
         subheading={index.frontmatter.subheading}
+        therapydescription={index.frontmatter.therapydescription}
+        educationdescription={index.frontmatter.educationdescription}
         heroimage={index.frontmatter.heroimage}
         heroheading={index.frontmatter.heroheading}
         herosubheading={index.frontmatter.herosubheading}
@@ -152,6 +158,8 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        therapydescription
+        educationdescription
         heroimage {
           childImageSharp {
             fluid(maxWidth: 800, quality: 90) {

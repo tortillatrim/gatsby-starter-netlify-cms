@@ -41,7 +41,7 @@ class CourseRoll extends React.Component {
                   <br />
                   <br />
                   <Link className="button" to={course.fields.slug}>
-                    Velg →
+                    Les mer →
                   </Link>
                 </p>
               </article>
