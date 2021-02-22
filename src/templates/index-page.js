@@ -4,14 +4,22 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import IconHeart from '../components/icons/IconHeart'
 import IconKnowledge from '../components/icons/IconKnowledge'
-import subImg from '../img/sub-hero.jpeg'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Content, { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
-}) => (
-  <div>
+  heroimage,
+  heroheading,
+  herosubheading,
+  content, contentComponent
+}) => {
+
+  const PageContent = contentComponent || Content
+  
+  return <div>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -26,7 +34,15 @@ export const IndexPageTemplate = ({
           <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen mt-5">
             {heading}
           </h1>
-          <div className="py-4">
+          {subheading.length > 0 && 
+            <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            style={{
+              lineHeight: '1.3',
+            }}>
+            {subheading}
+            </p> 
+          }
+          <div className="py-5">
             <Link to="/about" className="button is-white is-medium is-outlined mr-4">Les mer</Link>
             <Link to="/contact" className="button is-white is-medium is-outlined mr-4">Kontakt</Link>
             </div>
@@ -36,7 +52,7 @@ export const IndexPageTemplate = ({
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
-                <IconHeart size="64" />
+                <IconHeart size="56" />
                 <h4 className="is-size-5 mt-1 has-text-weight-semibold">EQ-Terapi</h4>
                 <p>Vi gir EQ-Terapi. bla bla bla </p>
                 <div className="action-icon">
@@ -50,7 +66,7 @@ export const IndexPageTemplate = ({
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/kompetanse">
               <div className="main-action-card has-text-centered p-4 content">
-                <IconKnowledge size="64"/>
+                <IconKnowledge size="56"/>
                 <h4 className="is-size-5 mt-1 has-text-weight-semibold">Kurs og kompetanse</h4>
                 <p>Vi har nettkurs og holder foredrag. bla bla bla </p>
                 <div className="action-icon">
@@ -65,24 +81,27 @@ export const IndexPageTemplate = ({
         </section>
 
         <section className="section container">
-          <div className="columns">
+          <div className="columns is-variable is-6">
           <div className="column">
-            <img src={subImg} />
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: heroimage,
+                alt: `Image for hero section`,
+              }}
+            />
           </div>
           <div className="column content">
-            <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">Hvorfor er vi til?</h3>
-            <h2 className="title mb-6">Vi brenner for at mennesker skal føle seg god nok, våge å vise hvem de er og leve sitt liv.</h2>
+            <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">{heroheading}</h3>
+            <h2 className="title mb-6">{herosubheading}</h2>
             <div className="">
-              <p>Gjennom erfaring fra barnehagen og EQ terapi utdanningen ser vi hvor utrolig viktig det er at foreldre og mennesker som jobber med barn har god relasjonskompetanse. Hvordan vi som voksne møter barn påvirker barns selvfølelse og hvordan de ser på seg selv. Dette synet på seg selv kan de bære med seg hele livet.</p>
-              <p>For at barn skal utvikle god psykisk helse er det viktig at de opplever gode møter med voksne i barndommen. Som voksen er det ikke alltid like lett å møte barn på en god nok måte, fordi gamle reaksjonsmønstre fra egen barndom kan overta. Vi ønsker å hjelpe barn og voksne slik at de kan håndtere følelsene sine på en hensiktsmessig måte.</p>
-              <p> Det er en viktig sammenheng mellom det å ha gode og nære relasjoner i livet sitt og det å kunne håndtere følelser. Vi ønsker å hjelpe foreldre og barn til å føle seg god nok.</p>
+              <PageContent className="content" content={content} />
             </div>
             </div>
           </div>
         </section>
     
   </div>
-)
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -91,14 +110,19 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { markdownRemark: index } = data
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        image={index.frontmatter.image}
+        heading={index.frontmatter.heading}
+        subheading={index.frontmatter.subheading}
+        heroimage={index.frontmatter.heroimage}
+        heroheading={index.frontmatter.heroheading}
+        herosubheading={index.frontmatter.herosubheading}
+        content={index.html}
+        contentComponent={HTMLContent}
       />
     </Layout>
   )
@@ -117,6 +141,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         image {
           childImageSharp {
@@ -127,6 +152,15 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        heroimage {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        heroheading
+        herosubheading
       }
     }
   }

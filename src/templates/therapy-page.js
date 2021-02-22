@@ -36,14 +36,17 @@ export const TherapyPageTemplate = ({
         <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen mt-5">
           {heading}
         </h1>
-        <p
-          className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            lineHeight: '1.3',
-          }}
-        >
-          {subheading}
-        </p>
+        {subheading!==undefined && 
+         <p
+         className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+         style={{
+           lineHeight: '1.3',
+         }}
+       >
+         {subheading}
+       </p> 
+        }
+       
         <div className="py-5">
           <Link to="bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
         </div>
