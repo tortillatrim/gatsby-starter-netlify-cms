@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
             </div>
         </div>
       
-        <div className="columns is-variable is-6 mt-6">
+        <div className="columns is-variable is-8 mt-6">
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
@@ -85,7 +85,7 @@ export const IndexPageTemplate = ({
         </section>
 
         <section className="section container">
-          <div className="columns is-variable is-6">
+          <div className="columns is-variable is-8">
           <div className="column">
             <PreviewCompatibleImage
               imageInfo={{
@@ -162,7 +162,7 @@ export const pageQuery = graphql`
         educationdescription
         heroimage {
           childImageSharp {
-            fluid(maxWidth: 800, quality: 90) {
+            fluid(maxWidth: 1024, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }

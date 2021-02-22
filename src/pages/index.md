@@ -8,7 +8,7 @@ therapydescription: >
   Vi gir EQ-Terapi. bla bla bla
 educationdescription: >
   Vi har nettkurs. bla bla bla
-heroimage: /img/sub-hero.jpeg
+heroimage: /img/hero3.jpeg
 heroheading: |
   Hvorfor er vi til?
 herosubheading: > 

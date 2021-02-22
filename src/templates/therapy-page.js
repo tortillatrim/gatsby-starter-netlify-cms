@@ -69,9 +69,9 @@ export const TherapyPageTemplate = ({
     <section className="section container">
       <h2 className="title">Møt terapeutene</h2>
       <TherapistRoll />
-      <div className="has-text-centered">
+      {/* <div className="has-text-centered">
         <Link className="btn" to="terapeuter">Til terapeuter</Link>
-      </div>
+      </div> */}
     </section>
 
     <section className="has-background-info-light">

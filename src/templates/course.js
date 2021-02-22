@@ -42,7 +42,7 @@ export const CourseTemplate = ({
                 <div className="p-5">
                   <h2>{name}</h2>
                   <p className="py-3">{description}</p>
-                  <a className="is-hidden-tablet button is-primary is-medium" href="https://hjertekroll.simplero.com/page/157257"><i className="material-icons pr-3">book_online</i> Meld deg på</a>
+                  <a className="is-hidden-tablet button is-primary is-medium" href="https://hjertekroll.simplero.com/page/157257"><i className="material-icons pr-3">shop</i> Meld deg på</a>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ export const CourseTemplate = ({
           </div>
           <div className="column is-two-third-tablet">
             <div className="therapist-main-action section is-hidden-mobile">
-              <a className="button cta-button is-large" href="https://hjertekroll.simplero.com/page/157257"><i className="material-icons pr-3">book_online</i> Meld deg på</a>
+              <a className="button cta-button is-large" href="https://hjertekroll.simplero.com/page/157257"><i className="material-icons pr-3">shop</i> Meld deg på</a>
             </div>
 
             <div className="section">

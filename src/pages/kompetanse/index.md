@@ -4,5 +4,5 @@ image: /img/hero.jpeg
 heading: |
   Nettkurs
 subheading: >
-  I våre nettkurs ønsker vi å hjelpe voksne til å øke sin relasjonskompetanse.
+  Med våre nettkurs ønsker vi å hjelpe voksne til å øke sin relasjonskompetanse.
 ---
