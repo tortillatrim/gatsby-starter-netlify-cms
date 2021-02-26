@@ -33,6 +33,7 @@ form
   font-size: 24px;
 
 .full-width-image
+    max-height: 90vh
     width: 100vw
     height: 400px
     background-size: cover
@@ -70,8 +71,8 @@ form
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
+.navbar-brand .navbar-item span
+  color: $hjertekroll-green-dark
 footer.footer
   padding: 3rem 0rem 1rem 0rem
   background-color: transparent
@@ -86,10 +87,8 @@ footer .column
   position: absolute
   background: none
   width: 100%
-  .navbar-item, .navbar-burger
+  .navbar-burger
     color: #fff
-  .navbar-menu
-    background-color: transparent
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -202,6 +201,11 @@ $menu-label-color: $white-ter
 +desktop
   .full-width-image
     background-attachment: fixed
+  .navbar.hero-image
+    .navbar-item
+      color: #fff
+    .navbar-menu
+      background-color: transparent
 
 +tablet-only
   .roll-list-item .featured-thumbnail

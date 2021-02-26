@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
       }}
     >
        <div className="section container has-text-white">
-          <img src={logo} alt="Hjertekrøll" width="150" height="150"/>
+          {/* <img src={logo} alt="Hjertekrøll" width="150" height="150" className="is-hidden-mobile"/> */}
           <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen mt-5">
             {heading}
           </h1>
