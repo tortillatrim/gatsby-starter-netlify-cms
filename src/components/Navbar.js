@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar"
+        className={`navbar ${this.props.className}`}
         role="navigation"
         aria-label="main-navigation"
       >
@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Hjertekrøll | EQ-Terapi">
               <img src={logo} alt="Hjertekrøll | EQ-Terapi"/>
-              <span className="ml-3 is-size-5 has-text-weight-semibold" style={{color: 'rgb(97 109 68)'}}>Hjertekrøll</span>
+              <span className="mx-3 is-size-4 has-text-weight-semibold">Hjertekrøll</span>
             </Link>
             {/* Hamburger menu */}
             <button type="button"
@@ -75,7 +75,7 @@ const Navbar = class extends React.Component {
 
             </div>
             <div className="navbar-end has-text-centered my-3">
-                <Link to="/eq-terapi/bestill-time" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
+                {/* <Link to="/eq-terapi/bestill-time" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link> */}
             </div>
           </div>
         </div>

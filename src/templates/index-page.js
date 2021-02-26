@@ -6,6 +6,7 @@ import IconHeart from '../components/icons/IconHeart'
 import IconOnlineCourse from '../components/icons/IconOnlineCourse'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Content, { HTMLContent } from '../components/Content'
+import logo from '../img/logo-small.png'
 
 export const IndexPageTemplate = ({
   image,
@@ -23,16 +24,14 @@ export const IndexPageTemplate = ({
   
   return <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image large margin-top-0 is-flex is-align-items-center"
       style={{
         backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
-        position: 'absolute'
       }}
     >
-      </div>
-      <section className="section container">
-        <div className=" has-text-white">
+       <div className="section container has-text-white">
+          <img src={logo} alt="Hjertekrøll" width="150" height="150"/>
           <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen mt-5">
             {heading}
           </h1>
@@ -49,8 +48,9 @@ export const IndexPageTemplate = ({
             <Link to="/contact" className="button is-white is-medium is-outlined mr-4">Kontakt</Link>
             </div>
         </div>
-      
-        <div className="columns is-variable is-8 mt-6">
+      </div>
+      <section className="section container pt-0" style={{marginTop: '-100px'}}>
+        <div className="columns is-variable is-8">
           <div className="column is-half-tablet is-one-quarter-desktop mb-5">
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
@@ -115,7 +115,7 @@ const IndexPage = ({ data }) => {
   const { markdownRemark: index } = data
 
   return (
-    <Layout>
+    <Layout navbarClass="hero-image">
       <IndexPageTemplate
         image={index.frontmatter.image}
         heading={index.frontmatter.heading}

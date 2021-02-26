@@ -7,7 +7,7 @@ import './dependencies.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ navbarClass, children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -70,11 +70,12 @@ const TemplateWrapper = ({ children }) => {
           `}
         </script>
       </Helmet>
-      <Navbar />
+      <Navbar className={navbarClass ? navbarClass : ''}/> 
       <div style={{minHeight: '70vh'}}>{children}</div>
       <Footer />
     </div>
   )
 }
+
 
 export default TemplateWrapper
