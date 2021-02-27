@@ -24,7 +24,7 @@ export const EducationPageTemplate = ({
           {heading}
         </h1>
         <p
-          className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen py-4"
           style={{
             lineHeight: '1.3',
           }}

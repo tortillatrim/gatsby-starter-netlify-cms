@@ -33,15 +33,17 @@ form
   font-size: 24px;
 
 .full-width-image
-    max-height: 90vh
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: top center
-    // display: flex
-    // align-items: center
-    &.large
-      height: 700px
+  max-height: 90vh
+  width: 100vw
+  height: 400px
+  background-size: cover
+  background-position: top center
+  // display: flex
+  // align-items: center
+  &.large
+    height: 700px
+  h1
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2)  
 
 
 .btn
@@ -72,7 +74,7 @@ form
   height: 1.5rem
   fill: currentColor
 .navbar-brand .navbar-item span
-  color: $hjertekroll-green-dark
+  color: $hjertekroll-green
 footer.footer
   padding: 3rem 0rem 1rem 0rem
   background-color: transparent
@@ -206,6 +208,8 @@ $menu-label-color: $white-ter
       color: #fff
     .navbar-menu
       background-color: transparent
+    .button.is-primary
+      display: none
 
 +tablet-only
   .roll-list-item .featured-thumbnail

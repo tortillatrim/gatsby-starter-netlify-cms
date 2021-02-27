@@ -75,7 +75,7 @@ const Navbar = class extends React.Component {
 
             </div>
             <div className="navbar-end has-text-centered my-3">
-                {/* <Link to="/eq-terapi/bestill-time" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link> */}
+                <Link to="/eq-terapi/bestill-time" className="button is-primary is-medium"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
             </div>
           </div>
         </div>

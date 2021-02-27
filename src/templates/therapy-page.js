@@ -38,7 +38,7 @@ export const TherapyPageTemplate = ({
         </h1>
         {subheading!==undefined && 
          <p
-         className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+         className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen py-4"
          style={{
            lineHeight: '1.3',
          }}
@@ -47,7 +47,7 @@ export const TherapyPageTemplate = ({
        </p> 
         }
        
-        <div className="py-5">
+        <div className="py-4">
           <Link to="bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
         </div>
       </div>
