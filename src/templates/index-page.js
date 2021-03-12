@@ -6,7 +6,6 @@ import IconHeart from '../components/icons/IconHeart'
 import IconOnlineCourse from '../components/icons/IconOnlineCourse'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Content, { HTMLContent } from '../components/Content'
-import logo from '../img/logo-small.png'
 
 export const IndexPageTemplate = ({
   image,
@@ -55,7 +54,7 @@ export const IndexPageTemplate = ({
             <Link  to="/eq-terapi">
               <div className="main-action-card has-text-centered p-4 content">
                 <IconHeart size="56" />
-                <h4 className="is-size-5 mt-1 has-text-weight-semibold">EQ-Tarapi</h4>
+                <h4 className="is-size-5 mt-1 has-text-weight-semibold">EQ-Terapi</h4>
                 <p>{therapydescription}</p>
                 <div className="action-icon">
                   <div className="action-icon-inner">
@@ -149,7 +148,7 @@ export const pageQuery = graphql`
       frontmatter {
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 90, duotone: { highlight: "#000000", shadow: "#000000", opacity: 45 }) {
+            fluid(maxWidth: 2048, quality: 90, duotone: { highlight: "#000000", shadow: "#000000", opacity: 40 }) {
               ...GatsbyImageSharpFluid
             }
           }
