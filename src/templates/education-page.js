@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CourseRoll from '../components/CourseRoll'
 
@@ -10,6 +11,7 @@ export const EducationPageTemplate = ({
   subheading,
 }) => (
   <div>
+    <Helmet title="Nettkurs | Hjertekrøll" />
     <div
       className="full-width-image margin-top-0"
       style={{

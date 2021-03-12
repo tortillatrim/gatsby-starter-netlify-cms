@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://terapi.hjertekroll.no`,
-    title: 'EQ Terapi | Hjertekrøll',
+    title: 'Hjem | Hjertekrøll | Øk din relasjonskompetanse',
     description:
       'Hjertekrøll tilbyr EQ terapi i Bergen',
   },

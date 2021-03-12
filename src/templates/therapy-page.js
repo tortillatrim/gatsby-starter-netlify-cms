@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import TherapistRoll from '../components/TherapistRoll'
@@ -23,6 +24,7 @@ export const TherapyPageTemplate = ({
   testimonials,
 }) => (
   <div>
+    <Helmet title="EQ-Terapi | Hjertekrøll" />
     <div
       className="full-width-image margin-top-0"
       style={{
