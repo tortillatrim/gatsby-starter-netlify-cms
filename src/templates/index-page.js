@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({
       }}
     >
       <div className="section container">
-        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen mt-5">
+        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
           {heading}
         </h1>
         {subheading!==undefined && 
@@ -47,9 +47,9 @@ export const IndexPageTemplate = ({
        </p> 
         }
        
-        <div className="py-4">
-          <Link to="bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
-          <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
+        <div>
+          <Link to="bestill-time" className="button cta-button is-medium mr-4 mt-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
+          <Link to="/about" className="button is-white is-medium is-outlined mr-4 mt-4">Om oss</Link>
         </div>
       </div>
     </div>
