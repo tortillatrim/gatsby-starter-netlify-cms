@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <div>
-    <div
+   <div
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -32,27 +32,23 @@ export const IndexPageTemplate = ({
         color: '#fff'
       }}
     >
-      <div
-        className="px-2"
-        style={{
-          maxWidth: '900px',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-        >
+      <div className="section container">
+        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen mt-5">
           {heading}
         </h1>
-        <p
-          className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            lineHeight: '1.3',
-          }}
-        >
-          {subheading}
-        </p>
-        <div className="py-5">
-          <Link to="/bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
+        {subheading!==undefined && 
+         <p
+         className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen py-4"
+         style={{
+           lineHeight: '1.3',
+         }}
+       >
+         {subheading}
+       </p> 
+        }
+       
+        <div className="py-4">
+          <Link to="bestill-time" className="button cta-button is-medium mr-4"><i className="material-icons pr-3">book_online</i> Bestill time</Link>
           <Link to="/about" className="button is-white is-medium is-outlined mr-4">Om oss</Link>
         </div>
       </div>
