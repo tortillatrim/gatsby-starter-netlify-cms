@@ -66,9 +66,9 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item is-tab" to="/kompetanse" partiallyActive={true} activeClassName="is-active">
                 Nettkurs
               </Link>
-              <Link className="navbar-item is-tab" to="/about" activeClassName="is-active">
+              {/* <Link className="navbar-item is-tab" to="/about" activeClassName="is-active">
                 Om oss
-              </Link>
+              </Link> */}
               <Link className="navbar-item is-tab" to="/contact" activeClassName="is-active">
                 Kontakt
               </Link>

@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import IconHeart from '../components/icons/IconHeart'
 import IconOnlineCourse from '../components/icons/IconOnlineCourse'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import Content, { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({
   image,
@@ -13,14 +12,16 @@ export const IndexPageTemplate = ({
   subheading,
   therapydescription,
   educationdescription,
-  heroimage,
-  heroheading,
-  herosubheading,
-  content, contentComponent
+  whyimage,
+  whyheading,
+  whysubheading,
+  whytext,
+  whoimage,
+  whoheading,
+  whosubheading,
+  whotext,
 }) => {
 
-  const PageContent = contentComponent || Content
-  
   return <div>
     <div
       className="full-width-image large margin-top-0 is-flex is-align-items-center"
@@ -81,23 +82,43 @@ export const IndexPageTemplate = ({
         </div>
         </section>
 
-        <section className="section container">
+        <section className="section container" id="why">
           <div className="columns is-variable is-8">
           <div className="column">
             <PreviewCompatibleImage
               imageInfo={{
-                image: heroimage,
+                image: whyimage,
                 alt: `Image for hero section`,
               }}
             />
           </div>
           <div className="column content">
-            <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">{heroheading}</h3>
-            <h2 className="title mb-6">{herosubheading}</h2>
-            <div className="">
-              <PageContent className="content" content={content} />
+            <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">{whyheading}</h3>
+            <h2 className="title mb-6">{whysubheading}</h2>
+            <div className="content">
+              {whytext}
             </div>
             </div>
+          </div>
+        </section>
+
+        <section className="section container" id="who">
+          <div className="columns is-variable is-8">
+          <div className="column content">
+            <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">{whoheading}</h3>
+            <h2 className="title mb-6">{whosubheading}</h2>
+            <div className="content">
+              {whotext}
+            </div>
+          </div>
+          <div className="column">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: whoimage,
+                alt: `Image for hero section`,
+              }}
+            />
+          </div>
           </div>
         </section>
     
@@ -121,11 +142,14 @@ const IndexPage = ({ data }) => {
         subheading={index.frontmatter.subheading}
         therapydescription={index.frontmatter.therapydescription}
         educationdescription={index.frontmatter.educationdescription}
-        heroimage={index.frontmatter.heroimage}
-        heroheading={index.frontmatter.heroheading}
-        herosubheading={index.frontmatter.herosubheading}
-        content={index.html}
-        contentComponent={HTMLContent}
+        whyimage={index.frontmatter.whyimage}
+        whyheading={index.frontmatter.whyheading}
+        whysubheading={index.frontmatter.whysubheading}
+        whytext={index.frontmatter.whytext}
+        whoimage={index.frontmatter.whyimage}
+        whoheading={index.frontmatter.whyheading}
+        whosubheading={index.frontmatter.whysubheading}
+        whotext={index.frontmatter.whytext}
       />
     </Layout>
   )
@@ -157,15 +181,26 @@ export const pageQuery = graphql`
         subheading
         therapydescription
         educationdescription
-        heroimage {
+        whyimage {
           childImageSharp {
             fluid(maxWidth: 1024, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        heroheading
-        herosubheading
+        whyheading
+        whysubheading
+        whytext
+        whoimage {
+          childImageSharp {
+            fluid(maxWidth: 1024, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        whoheading
+        whosubheading
+        whotext
       }
     }
   }
