@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import IconHeart from '../components/icons/IconHeart'
 import IconOnlineCourse from '../components/icons/IconOnlineCourse'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Content, { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({
   image,
@@ -15,13 +16,13 @@ export const IndexPageTemplate = ({
   whyimage,
   whyheading,
   whysubheading,
-  whytext,
   whoimage,
   whoheading,
   whosubheading,
   whotext,
+  content, contentComponent
 }) => {
-
+  const PageContent = contentComponent || Content
   return <div>
     <div
       className="full-width-image large margin-top-0 is-flex is-align-items-center"
@@ -85,6 +86,7 @@ export const IndexPageTemplate = ({
         <section className="section container" id="why">
           <div className="columns is-variable is-8">
           <div className="column">
+            <div className="shadowed-img">
             <PreviewCompatibleImage
               imageInfo={{
                 image: whyimage,
@@ -92,12 +94,11 @@ export const IndexPageTemplate = ({
               }}
             />
           </div>
+          </div>
           <div className="column content">
             <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">{whyheading}</h3>
             <h2 className="title mb-6">{whysubheading}</h2>
-            <div className="content">
-              {whytext}
-            </div>
+            <PageContent className="content" content={content} />
             </div>
           </div>
         </section>
@@ -107,18 +108,24 @@ export const IndexPageTemplate = ({
           <div className="column content">
             <h3 className="has-text-primary mb-0 is-size-5 has-text-weight-bold">{whoheading}</h3>
             <h2 className="title mb-6">{whosubheading}</h2>
-            <div className="content">
-              {whotext}
+            <HTMLContent className="content" content={whotext} />
+          </div>
+          <div className="column content">
+              <div className="profile-card has-text-centered p-4 content">
+                    <div className="profile-image" style={{
+                      backgroundImage: `url(${!!whoimage.childImageSharp ? whoimage.childImageSharp.fluid.src : whoimage
+                      })`,
+                    }}></div> 
+                    <h4 className="is-size-5 mt-1 has-text-weight-semibold">Anja</h4>
+              </div>
+              <div className="profile-card has-text-centered p-4 content">
+                    <div className="profile-image" style={{
+                      backgroundImage: `url(${!!whoimage.childImageSharp ? whoimage.childImageSharp.fluid.src : whoimage
+                      })`,
+                    }}></div> 
+                    <h4 className="is-size-5 mt-1 has-text-weight-semibold">Anja</h4>
+              </div>
             </div>
-          </div>
-          <div className="column">
-            <PreviewCompatibleImage
-              imageInfo={{
-                image: whoimage,
-                alt: `Image for hero section`,
-              }}
-            />
-          </div>
           </div>
         </section>
     
@@ -145,11 +152,12 @@ const IndexPage = ({ data }) => {
         whyimage={index.frontmatter.whyimage}
         whyheading={index.frontmatter.whyheading}
         whysubheading={index.frontmatter.whysubheading}
-        whytext={index.frontmatter.whytext}
-        whoimage={index.frontmatter.whyimage}
-        whoheading={index.frontmatter.whyheading}
-        whosubheading={index.frontmatter.whysubheading}
-        whotext={index.frontmatter.whytext}
+        whoimage={index.frontmatter.whoimage}
+        whoheading={index.frontmatter.whoheading}
+        whosubheading={index.frontmatter.whosubheading}
+        whotext={index.frontmatter.whotext.childMarkdownRemark.html}
+        contentComponent={HTMLContent}
+        content={index.html}
       />
     </Layout>
   )
@@ -190,7 +198,6 @@ export const pageQuery = graphql`
         }
         whyheading
         whysubheading
-        whytext
         whoimage {
           childImageSharp {
             fluid(maxWidth: 1024, quality: 90) {
@@ -200,7 +207,11 @@ export const pageQuery = graphql`
         }
         whoheading
         whosubheading
-        whotext
+        whotext {
+          childMarkdownRemark {
+            html
+          }
+        }
       }
     }
   }
