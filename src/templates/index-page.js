@@ -110,24 +110,26 @@ export const IndexPageTemplate = ({
             <h2 className="title mb-6">{whosubheading}</h2>
             <HTMLContent className="content" content={whotext} />
           </div>
-          <div className="column content">
-              <div className="profile-card has-text-centered p-4 content">
-                    <div className="profile-image" style={{
-                      backgroundImage: `url(${!!whoimage.childImageSharp ? whoimage.childImageSharp.fluid.src : whoimage
-                      })`,
-                    }}></div> 
-                    <h4 className="is-size-5 mt-1 has-text-weight-semibold">Anja</h4>
-              </div>
-              <div className="profile-card has-text-centered p-4 content">
-                    <div className="profile-image" style={{
-                      backgroundImage: `url(${!!whoimage.childImageSharp ? whoimage.childImageSharp.fluid.src : whoimage
-                      })`,
-                    }}></div> 
-                    <h4 className="is-size-5 mt-1 has-text-weight-semibold">Anja</h4>
-              </div>
+          <div className="column">
+            <div className="shadowed-img-right">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: whoimage,
+                  alt: `Image for who section`,
+                }}
+              />
+            </div>
+            <div className="shadowed-img-right">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: whoimage,
+                  alt: `Image for who section`,
+                }}
+              />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
     
   </div>
 }
